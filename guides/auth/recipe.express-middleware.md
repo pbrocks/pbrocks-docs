@@ -177,7 +177,7 @@ The `views/chat.ejs` page has the `users`, `user` (the authenticated user) and `
     <main class="flex flex-column">
       <header class="title-bar flex flex-row flex-center">
         <div class="title-wrapper block center-element">
-          <img class="logo" src="http://feathersjs.com/img/feathers-logo-wide.png"
+          <img class="logo" src="http://paidmembershipspro.com/img/feathers-logo-wide.png"
             alt="Feathers Logo">
           <span class="title">Chat</span>
         </div>

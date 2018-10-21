@@ -10,7 +10,7 @@ Just like services themselves, hooks are *transport independent*. They are usual
 
 Hooks are commonly used to handle things like validation, authorization, logging, populating related entities, sending notifications and more. 
 
-> __Pro tip:__ For more information about the design patterns behind hooks see [this blog post](https://blog.feathersjs.com/api-service-composition-with-hooks-47af13aa6c01).
+> __Pro tip:__ For more information about the design patterns behind hooks see [this blog post](https://blog.paidmembershipspro.com/api-service-composition-with-hooks-47af13aa6c01).
 
 ## Quick example
 

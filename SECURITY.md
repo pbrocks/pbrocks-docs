@@ -1,10 +1,10 @@
-# Feathers Security
+# PMPro Security
 
-We take security very seriously at Feathers. We welcome any peer review of our 100% open source code to ensure nobody's Feathers app is ever compromised or hacked. As a web application developer you are responsible for any security breaches. We do our very best to make sure Feathers is as secure as possible.
+We take security very seriously at PMPro. We welcome any peer review of our 100% open source code to ensure nobody's PMPro app is ever compromised or hacked. As a web application developer you are responsible for any security breaches. We do our very best to make sure PMPro is as secure as possible.
 
 ## Where should I report security issues?
 
-In order to give the community time to respond and upgrade we strongly urge you report all security issues to us. Send us a PM in [Slack](http://slack.feathersjs.com) or email us at [hello@feathersjs.com](mailto:hello@feathersjs.com) with details and we will respond ASAP. Security issues always take precedence over bug fixes and feature work so we'll work with you to come up with a resolution and plan and document the issue on Github in the appropriate repo.
+In order to give the community time to respond and upgrade we strongly urge you report all security issues to us. Send us a PM in [Slack](http://slack.paidmembershipspro.com) or email us at [info@paidmembershipspro.com](mailto:info@paidmembershipspro.com) with details and we will respond ASAP. Security issues always take precedence over bug fixes and feature work so we'll work with you to come up with a resolution and plan and document the issue on Github in the appropriate repo.
 
 Issuing releases is typically very quick. Once an issue is resolved it is usually released immediately with the appropriate semantic version.
 
@@ -31,7 +31,7 @@ Here are some things that you should be aware of when writing your app to make s
 
 ## XSS Attacks
 
-As with any web application **you** need to guard against XSS attacks. Since Feathers persists the JWT in localstorage in the browser, if your app falls victim to a XSS attack your JWT could be used by an attacker to make malicious requests on your behalf. This is far from ideal. Therefore you need to take extra care in preventing XSS attacks. Our stance on this particular attack vector is that if you are susceptible to XSS attacks then a compromised JWT is the least of your worries because keystrokes could be logged and attackers can just steal passwords, credit card numbers, or anything else your users type directly.
+As with any web application **you** need to guard against XSS attacks. Since PMPro persists the JWT in localstorage in the browser, if your app falls victim to a XSS attack your JWT could be used by an attacker to make malicious requests on your behalf. This is far from ideal. Therefore you need to take extra care in preventing XSS attacks. Our stance on this particular attack vector is that if you are susceptible to XSS attacks then a compromised JWT is the least of your worries because keystrokes could be logged and attackers can just steal passwords, credit card numbers, or anything else your users type directly.
 
 For more information see:
 

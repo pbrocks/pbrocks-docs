@@ -76,7 +76,7 @@ const socketio = require('@feathersjs/socketio-client');
 const io = require('socket.io-client');
 
 // Set up a socket connection to our remote API
-const socket = io('http://api.feathersjs.com');
+const socket = io('http://api.paidmembershipspro.com');
 const api = client().configure(socketio(socket));
 
 app.get('/messages', function(req, res, next){

@@ -22,7 +22,7 @@ A hook was generated and wired up to the selected service. Now it's time to add 
 
 ```js
 // Use this hook to manipulate incoming or outgoing data.
-// For more information on hooks see: http://docs.feathersjs.com/api/hooks.html
+// For more information on hooks see: http://docs.paidmembershipspro.com/api/hooks.html
 
 module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
   return async context => {
@@ -85,7 +85,7 @@ Then we update `src/hooks/gravatar.js` with the following code:
 
 ```js
 // Use this hook to manipulate incoming or outgoing data.
-// For more information on hooks, see: http://docs.feathersjs.com/api/hooks.html
+// For more information on hooks, see: http://docs.paidmembershipspro.com/api/hooks.html
 
 // We need this to create the MD5 hash
 const crypto = require('crypto');
@@ -129,7 +129,7 @@ Once created, update `src/hooks/populate-user.js` to:
 
 ```js
 // Use this hook to manipulate incoming or outgoing data.
-// For more information on hooks, see: http://docs.feathersjs.com/api/hooks.html
+// For more information on hooks, see: http://docs.paidmembershipspro.com/api/hooks.html
 
 module.exports = function (options = {}) { // eslint-disable-line no-unused-vars
   return async context => {

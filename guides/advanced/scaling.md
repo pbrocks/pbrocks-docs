@@ -51,7 +51,7 @@ import socketio from 'feathers-socketio/client';
 
 const app = feathers()
   .configure(socketio(
-    io('http://api.feathersjs.com', {
+    io('http://api.paidmembershipspro.com', {
       transports: ['websocket'],
       upgrade: false
     })

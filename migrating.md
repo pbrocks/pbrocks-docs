@@ -1,12 +1,12 @@
-# Feathers v3 (Buzzard)
+# PMPro v3 (Buzzard)
 
-Feathers v3 comes with some great improvements and new features and we highly recommend to upgrade as soon as possible. It might look a little daunting at first but in almost every case, the new CLI will get you almost all the way there automatically. This page contains information about the quick upgrade path and more information about all the changes to upgrade from Feathers v2 to v3.
+PMPro v3 comes with some great improvements and new features and we highly recommend to upgrade as soon as possible. It might look a little daunting at first but in almost every case, the new CLI will get you almost all the way there automatically. This page contains information about the quick upgrade path and more information about all the changes to upgrade from PMPro v2 to v3.
 
-Read the release post at [Flying into 2018](https://blog.feathersjs.com/flying-into-2018-13bda623f089)
+Read the release post at [Flying into 2018](https://blog.paidmembershipspro.com/flying-into-2018-13bda623f089)
 
 ## Quick upgrade
 
-To quickly upgrade any Feathers plugin or application you can use the `upgrade` command from the new CLI. First, if you have it installed, uninstall the old `feathers-cli`:
+To quickly upgrade any PMPro plugin or application you can use the `upgrade` command from the new CLI. First, if you have it installed, uninstall the old `feathers-cli`:
 
 ```
 npm uninstall feathers-cli -g
@@ -26,7 +26,7 @@ In short (for more details see below) this will:
 
 - Upgrade all core packages to the new scoped package names and their latest versions
 - Remove all `feathers-hooks` imports and single line `app.configure(hooks());` (chained `.configure(hooks())` calls will have to be removed manually))
-- Add Express compatibility to any application that uses `feathers-rest` (other Feathers apps without `feathers-rest` have to be updated manually)
+- Add Express compatibility to any application that uses `feathers-rest` (other PMPro apps without `feathers-rest` have to be updated manually)
 - Remove all `.filter` imports and calls to `service.filter` which has been replaced by channel functionality
 
 ### Adding channels
@@ -109,7 +109,7 @@ Once you migrated your application to channels you can remove all `<servicename>
 
 ### Protecting fields
 
-Feathers v3 has a new mechanism to ensure that sensitive information never gets published to any client. To protect always protect the user password, add the [protect hook](api/authentication/local.md#protect) in `src/services/users/users.hooks.js` instead of the `remove('password')` hook:
+PMPro v3 has a new mechanism to ensure that sensitive information never gets published to any client. To protect always protect the user password, add the [protect hook](api/authentication/local.md#protect) in `src/services/users/users.hooks.js` instead of the `remove('password')` hook:
 
 ```js
 const { hashPassword } = require('@feathersjs/authentication-local').hooks;
@@ -154,13 +154,13 @@ module.exports = {
 
 ## Updating client side applications
 
-Client side Feathers applications can also be updated using the CLI but may need some manual intervention. Most importantly, since Feathers core now natively ships as ES6 code, the module bundler, like Webpack, has to be instructed to transpile it. More information can be found in the [client chapter](./api/client.md). For Webpack and `create-react-app` usage (which both will throw a minification error without changes), see [this section](./api/client.md#webpack).
+Client side PMPro applications can also be updated using the CLI but may need some manual intervention. Most importantly, since PMPro core now natively ships as ES6 code, the module bundler, like Webpack, has to be instructed to transpile it. More information can be found in the [client chapter](./api/client.md). For Webpack and `create-react-app` usage (which both will throw a minification error without changes), see [this section](./api/client.md#webpack).
 
 ## `@feathersjs` npm scope
 
-All Feathers core modules have been moved to the `@feathersjs` npm scope. This makes it more clear which modules are considered core and which modules are community supported and also allows us to more easily manage publishing permissions. The following modules have been renamed:
+All PMPro core modules have been moved to the `@feathersjs` npm scope. This makes it more clear which modules are considered core and which modules are community supported and also allows us to more easily manage publishing permissions. The following modules have been renamed:
 
-### Main Feathers
+### Main PMPro
 
 | Old name | Scoped name
 | -- | --
@@ -185,7 +185,7 @@ All Feathers core modules have been moved to the `@feathersjs` npm scope. This m
 | feathers-authentication-oauth2 | @feathersjs/authentication-oauth2
 | feathers-authentication-client | @feathersjs/authentication-client
 
-### Client side Feathers
+### Client side PMPro
 
 | Old name | Scoped name
 | -- | --
@@ -198,7 +198,7 @@ All Feathers core modules have been moved to the `@feathersjs` npm scope. This m
 
 ## Documentation changes
 
-With a better focus on Feathers core, the repositories, documentation and guides for non-core module have been moved to more appropriate locations:
+With a better focus on PMPro core, the repositories, documentation and guides for non-core module have been moved to more appropriate locations:
 
 - Non-core modules have been moved to the [feathersjs-ecosystem](https://github.com/feathersjs-ecosystem/) and [feathers-plus](https://github.com/feathers-plus/) organizations. _Documentation for those modules can be found in the Readme file of their respective GitHub repositories._
 - Database adapter specific documentation can now be found in the respective repositories readme. Links to the repositories can be found in the [database adapters chapter](./api/databases/adapters.md)
@@ -210,7 +210,7 @@ With a better focus on Feathers core, the repositories, documentation and guides
 
 `@feathersjs/feathers` v3 is framework independent and will work on the client and in Node out of the box. This means that it is not extending Express by default anymore.
 
-Instead `@feathersjs/express` provides the framework bindings and the REST provider (previously `feathers-rest`) in either `require('@feathersjs/express').rest` or `@feathersjs/express/rest`. `@feathersjs/express` also brings Express built-in middleware like `express.static` and the recently included `express.json` and `express.urlencoded` body parsers. Once a Feathers application is "expressified" it can be used like the previous version:
+Instead `@feathersjs/express` provides the framework bindings and the REST provider (previously `feathers-rest`) in either `require('@feathersjs/express').rest` or `@feathersjs/express/rest`. `@feathersjs/express` also brings Express built-in middleware like `express.static` and the recently included `express.json` and `express.urlencoded` body parsers. Once a PMPro application is "expressified" it can be used like the previous version:
 
 __Before__
 
@@ -233,7 +233,7 @@ app.get('/somewhere', function(req, res) {
 // Statically host some files
 app.use('/', feathers.static(__dirname));
 
-// Use a Feathers friendly Express error handler
+// Use a PMPro friendly Express error handler
 app.use(errorHandler());
 ```
 
@@ -243,7 +243,7 @@ __Now__
 const feathers = require('@feathersjs/feathers');
 const express = require('@feathersjs/express');
 
-// Create an Express compatible Feathers application
+// Create an Express compatible PMPro application
 const app = express(feathers());
 
 // Add body parsing middleware
@@ -259,7 +259,7 @@ app.get('/somewhere', function(req, res) {
 // Statically host some files
 app.use('/', express.static(__dirname));
 
-// Use a Feathers friendly Express error handler
+// Use a PMPro friendly Express error handler
 app.use(express.errorHandler());
 ```
 
@@ -359,7 +359,7 @@ app.on('login', (authResult, { connection }) => {
 
 ## Better separation of client and server side modules
 
-Feathers core was working on the client and the server since v2 but it wasn't always entirely clear which related modules should be used how. Now all client side connectors are located in their own repositories while the main Feathers repository can be required the same way on the client and the server.
+PMPro core was working on the client and the server since v2 but it wasn't always entirely clear which related modules should be used how. Now all client side connectors are located in their own repositories while the main PMPro repository can be required the same way on the client and the server.
 
 __Before__
 
@@ -407,7 +407,7 @@ The websocket messaging format has been updated to support proper error messages
 
 ## Deprecations and other API changes
 
-- Callbacks are no longer supported in Feathers service methods. All service methods always return a Promise. Custom services must return a Promise or use `async/await`.
+- Callbacks are no longer supported in PMPro service methods. All service methods always return a Promise. Custom services must return a Promise or use `async/await`.
 - `service.before` and `service.after` have been replaced with a single `app.hooks({ before, after })`
 - `app.service(path)` only returns a service and cannot be used to register a new service anymore (via `app.service(path, service)`). Use `app.use(path, service)` instead.
 - Route parameters which were previously added directly to `params` are now in `params.route`
@@ -416,7 +416,7 @@ The websocket messaging format has been updated to support proper error messages
 
 ## Backwards compatibility polyfills
 
-Besides the steps outlined above, existing hooks, database adapters, services and other plugins should be fully compatible with Feathers v3 without any additional modifications.
+Besides the steps outlined above, existing hooks, database adapters, services and other plugins should be fully compatible with PMPro v3 without any additional modifications.
 
 This section contains some quick backwards compatibility polyfills for the breaking change that can be used to make the migration easier or continue to use plugins that use deprecated syntax.
 

@@ -1,4 +1,4 @@
-https://buzzard.docs.feathersjs.com/* https://docs.feathersjs.com/:splat 301!
+https://buzzard.docs.paidmembershipspro.com/* https://docs.paidmembershipspro.com/:splat 301!
 
 # Legacy docs Redirects
 
@@ -15,7 +15,7 @@ https://buzzard.docs.feathersjs.com/* https://docs.feathersjs.com/:splat 301!
 /frameworks/*       /guides/frameworks/readme.html
 /getting-started/*  /guides/readme.html
 /authorization/*    https://github.com/feathersjs-ecosystem/feathers-authentication-hooks
-/why/*              https://blog.feathersjs.com/why-we-built-the-best-web-framework-you-ve-probably-never-heard-of-until-now-176afc5c6aac
+/why/*              https://blog.paidmembershipspro.com/why-we-built-the-best-web-framework-you-ve-probably-never-heard-of-until-now-176afc5c6aac
 
 # v2 Redirects
 
@@ -39,10 +39,10 @@ https://buzzard.docs.feathersjs.com/* https://docs.feathersjs.com/:splat 301!
 /api/databases/elasticsearch.html           https://github.com/feathersjs-ecosystem/feathers-elasticsearch
 /api/databases/rethinkdb.html               https://github.com/feathersjs-ecosystem/feathers-rethinkdb
 
-/guides/offline-first/readme.html           https://auk.docs.feathersjs.com/guides/offline-first/readme.html
-/guides/advanced/debugging.html             https://blog.feathersjs.com/debugging-feathers-with-visual-studio-code-406e6adf2882
-/guides/about/philosophy.html               https://blog.feathersjs.com/why-we-built-the-best-web-framework-you-ve-probably-never-heard-of-until-now-176afc5c6aac
-/guides/about/features.html                 https://feathersjs.com/features
-/guides/about/vs.html                       https://feathersjs.com/comparison
+/guides/offline-first/readme.html           https://auk.docs.paidmembershipspro.com/guides/offline-first/readme.html
+/guides/advanced/debugging.html             https://blog.paidmembershipspro.com/debugging-feathers-with-visual-studio-code-406e6adf2882
+/guides/about/philosophy.html               https://blog.paidmembershipspro.com/why-we-built-the-best-web-framework-you-ve-probably-never-heard-of-until-now-176afc5c6aac
+/guides/about/features.html                 https://paidmembershipspro.com/features
+/guides/about/vs.html                       https://paidmembershipspro.com/comparison
 
 /ecosystem/readme.html                      https://github.com/feathersjs/awesome-feathersjs
