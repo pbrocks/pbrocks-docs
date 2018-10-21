@@ -1,0 +1,1370 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Events · FeathersJS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-feathers-versions/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="channels.html" />
+    
+    
+    <link rel="prev" href="hooks.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../guides/readme.html">
+            
+                <a href="../guides/readme.html">
+            
+                    
+                    Guides
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../guides/basics/readme.html">
+            
+                <a href="../guides/basics/readme.html">
+            
+                    
+                    The Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../guides/basics/setup.html">
+            
+                <a href="../guides/basics/setup.html">
+            
+                    
+                    Setting up
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../guides/basics/starting.html">
+            
+                <a href="../guides/basics/starting.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../guides/basics/services.html">
+            
+                <a href="../guides/basics/services.html">
+            
+                    
+                    Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../guides/basics/hooks.html">
+            
+                <a href="../guides/basics/hooks.html">
+            
+                    
+                    Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../guides/basics/rest.html">
+            
+                <a href="../guides/basics/rest.html">
+            
+                    
+                    REST APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="../guides/basics/databases.html">
+            
+                <a href="../guides/basics/databases.html">
+            
+                    
+                    Databases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="../guides/basics/real-time.html">
+            
+                <a href="../guides/basics/real-time.html">
+            
+                    
+                    Real-time APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.8" data-path="../guides/basics/clients.html">
+            
+                <a href="../guides/basics/clients.html">
+            
+                    
+                    Clients
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.9" data-path="../guides/basics/generator.html">
+            
+                <a href="../guides/basics/generator.html">
+            
+                    
+                    The generator (CLI)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../guides/chat/readme.html">
+            
+                <a href="../guides/chat/readme.html">
+            
+                    
+                    A Chat Application
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../guides/chat/creating.html">
+            
+                <a href="../guides/chat/creating.html">
+            
+                    
+                    Creating the application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../guides/chat/service.html">
+            
+                <a href="../guides/chat/service.html">
+            
+                    
+                    Generating a service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../guides/chat/authentication.html">
+            
+                <a href="../guides/chat/authentication.html">
+            
+                    
+                    Adding authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../guides/chat/processing.html">
+            
+                <a href="../guides/chat/processing.html">
+            
+                    
+                    Processing data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../guides/chat/frontend.html">
+            
+                <a href="../guides/chat/frontend.html">
+            
+                    
+                    Building a frontend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="../guides/chat/testing.html">
+            
+                <a href="../guides/chat/testing.html">
+            
+                    
+                    Writing tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../guides/frameworks/readme.html">
+            
+                <a href="../guides/frameworks/readme.html">
+            
+                    
+                    Frameworks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../guides/auth/readme.html">
+            
+                <a href="../guides/auth/readme.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../guides/auth/how-jwt-works.html">
+            
+                <a href="../guides/auth/how-jwt-works.html">
+            
+                    
+                    How JWT works
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../guides/auth/recipe.express-middleware.html">
+            
+                <a href="../guides/auth/recipe.express-middleware.html">
+            
+                    
+                    Recipe: Express middleware (SSR)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../guides/auth/recipe.customize-response.html">
+            
+                <a href="../guides/auth/recipe.customize-response.html">
+            
+                    
+                    Recipe: Custom Login Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../guides/auth/recipe.customize-jwt-payload.html">
+            
+                <a href="../guides/auth/recipe.customize-jwt-payload.html">
+            
+                    
+                    Recipe: Custom JWT Payload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../guides/auth/recipe.mixed-auth.html">
+            
+                <a href="../guides/auth/recipe.mixed-auth.html">
+            
+                    
+                    Recipe: Mixed Auth Endpoints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../guides/auth/recipe.oauth-basic.html">
+            
+                <a href="../guides/auth/recipe.oauth-basic.html">
+            
+                    
+                    Recipe: Basic OAuth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="../guides/auth/recipe.custom-auth-strategy.html">
+            
+                <a href="../guides/auth/recipe.custom-auth-strategy.html">
+            
+                    
+                    Recipe: Custom Auth Strategies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../guides/advanced/readme.html">
+            
+                <a href="../guides/advanced/readme.html">
+            
+                    
+                    Advanced Topics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../guides/advanced/file-uploading.html">
+            
+                <a href="../guides/advanced/file-uploading.html">
+            
+                    
+                    Uploading files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../guides/advanced/using-a-view-engine.html">
+            
+                <a href="../guides/advanced/using-a-view-engine.html">
+            
+                    
+                    Using a view engine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../guides/advanced/scaling.html">
+            
+                <a href="../guides/advanced/scaling.html">
+            
+                    
+                    Scaling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../guides/advanced/creating-a-plugin.html">
+            
+                <a href="../guides/advanced/creating-a-plugin.html">
+            
+                    
+                    Creating a plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    Core
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="application.html">
+            
+                <a href="application.html">
+            
+                    
+                    Application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="services.html">
+            
+                <a href="services.html">
+            
+                    
+                    Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="hooks.html">
+            
+                <a href="hooks.html">
+            
+                    
+                    Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.4" data-path="events.html">
+            
+                <a href="events.html">
+            
+                    
+                    Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="channels.html">
+            
+                <a href="channels.html">
+            
+                    
+                    Channels
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    Transports
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="express.html">
+            
+                <a href="express.html">
+            
+                    
+                    Express
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="socketio.html">
+            
+                <a href="socketio.html">
+            
+                    
+                    Socket.io
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="primus.html">
+            
+                <a href="primus.html">
+            
+                    
+                    Primus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    Client
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="client.html">
+            
+                <a href="client.html">
+            
+                    
+                    Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="client/rest.html">
+            
+                <a href="client/rest.html">
+            
+                    
+                    REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="client/socketio.html">
+            
+                <a href="client/socketio.html">
+            
+                    
+                    Socket.io
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="client/primus.html">
+            
+                <a href="client/primus.html">
+            
+                    
+                    Primus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    Authentication
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="authentication/server.html">
+            
+                <a href="authentication/server.html">
+            
+                    
+                    Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="authentication/client.html">
+            
+                <a href="authentication/client.html">
+            
+                    
+                    Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="authentication/local.html">
+            
+                <a href="authentication/local.html">
+            
+                    
+                    Local
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="authentication/jwt.html">
+            
+                <a href="authentication/jwt.html">
+            
+                    
+                    JWT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="authentication/oauth1.html">
+            
+                <a href="authentication/oauth1.html">
+            
+                    
+                    OAuth1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="authentication/oauth2.html">
+            
+                <a href="authentication/oauth2.html">
+            
+                    
+                    OAuth2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" >
+            
+                <span>
+            
+                    
+                    Database
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="databases/adapters.html">
+            
+                <a href="databases/adapters.html">
+            
+                    
+                    Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="databases/common.html">
+            
+                <a href="databases/common.html">
+            
+                    
+                    Common API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="databases/querying.html">
+            
+                <a href="databases/querying.html">
+            
+                    
+                    Querying
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../migrating.html">
+            
+                <a href="../migrating.html">
+            
+                    
+                    Migrating
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../SECURITY.html">
+            
+                <a href="../SECURITY.html">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <a target="_blank" href="https://github.com/feathersjs/awesome-feathersjs">
+            
+                    
+                    Ecosystem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../help/readme.html">
+            
+                <a href="../help/readme.html">
+            
+                    
+                    Help
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../faq/readme.html">
+            
+                <a href="../faq/readme.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../contributing/readme.html">
+            
+                <a href="../contributing/readme.html">
+            
+                    
+                    Contributing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../license.html">
+            
+                <a href="../license.html">
+            
+                    
+                    License
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Events</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+  
+                                <h1 id="events">Events</h1>
+<p>Events are the key part of Feathers real-time functionality. All events in Feathers are provided through the <a href="https://nodejs.org/api/events.html" target="_blank">NodeJS EventEmitter</a> interface. This section describes</p>
+<ul>
+<li>A quick overview of the <a href="#eventemitters">NodeJS EventEmitter interface</a></li>
+<li>The standard <a href="#service-events">service events</a></li>
+<li>How to allow sending <a href="#custom-events">custom events</a> from the server to the client</li>
+</ul>
+<blockquote>
+<p><strong>Important:</strong> For more information on how to send real-time events to clients, see the <a href="channels.html">Channels chapter</a>.</p>
+</blockquote>
+<h2 id="eventemitters">EventEmitters</h2>
+<p>Once registered, any <a href="services.html">service</a> gets turned into a standard <a href="https://nodejs.org/api/events.html" target="_blank">NodeJS EventEmitter</a> and can be used accordingly.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> messages = app.service(<span class="hljs-string">&apos;messages&apos;</span>);
+
+<span class="hljs-comment">// Listen to a normal service event</span>
+messages.on(<span class="hljs-string">&apos;patched&apos;</span>, message =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;message patched&apos;</span>, message));
+
+<span class="hljs-comment">// Only listen to an event once</span>
+messsages.once(<span class="hljs-string">&apos;removed&apos;</span>, message =&gt;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;First time a message has been removed&apos;</span>, message)
+);
+
+<span class="hljs-comment">// A reference to a handler</span>
+<span class="hljs-keyword">const</span> onCreatedListener = message =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;New message created&apos;</span>, message);
+
+<span class="hljs-comment">// Listen `created` with a handler reference</span>
+messages.on(<span class="hljs-string">&apos;created&apos;</span>, onCreatedListener);
+
+<span class="hljs-comment">// Unbind the `created` event listener</span>
+messages.removeListener(<span class="hljs-string">&apos;created&apos;</span>, onCreatedListener);
+
+<span class="hljs-comment">// Send a custom event</span>
+messages.emit(<span class="hljs-string">&apos;customEvent&apos;</span>, {
+  type: <span class="hljs-string">&apos;customEvent&apos;</span>,
+  data: <span class="hljs-string">&apos;can be anything&apos;</span>
+});
+</code></pre>
+<h2 id="service-events">Service Events</h2>
+<p>Any service automaticaly emits <code>created</code>, <code>updated</code>, <code>patched</code> and <code>removed</code> events when the respective service method returns successfully. This works on the client as well as on the server. When the client is using <a href="socketio.html">Socket.io</a> or <a href="primus.html">Primus</a>, events will be pushed automatically from the server to all connected clients. This is essentially how Feathers does real-time.</p>
+<blockquote>
+<p><strong>ProTip:</strong> Events are not fired until all of your <a href="hooks.html">hooks</a> have executed.</p>
+</blockquote>
+<!-- -->
+<blockquote>
+<p><strong>Important:</strong> For information on how those events are published for real-time updates to connected clients, see the <a href="channels.html">channel chapter</a>.</p>
+</blockquote>
+<p>Additionally to the event <code>data</code>, all events also get the <a href="hooks">hook context</a> from their method call passed as the second parameter.</p>
+<h3 id="created">created</h3>
+<p>The <code>created</code> event will fire with the result data when a service <code>create</code> returns successfully.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> feathers = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@feathersjs/feathers&apos;</span>);
+<span class="hljs-keyword">const</span> app = feathers();
+
+app.use(<span class="hljs-string">&apos;/messages&apos;</span>, {
+  create(data, params) {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.resolve(data);
+  }
+});
+
+<span class="hljs-comment">// Retrieve the wrapped service object which will be an event emitter</span>
+<span class="hljs-keyword">const</span> messages = app.service(<span class="hljs-string">&apos;messages&apos;</span>);
+
+messages.on(<span class="hljs-string">&apos;created&apos;</span>, (message, context) =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;created&apos;</span>, message));
+
+messages.create({
+  text: <span class="hljs-string">&apos;We have to do something!&apos;</span>
+});
+</code></pre>
+<h3 id="updated-patched">updated, patched</h3>
+<p>The <code>updated</code> and <code>patched</code> events will fire with the callback data when a service <code>update</code> or <code>patch</code> method calls back successfully.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> feathers = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@feathersjs/feathers&apos;</span>);
+<span class="hljs-keyword">const</span> app = feathers();
+
+app.use(<span class="hljs-string">&apos;/my/messages/&apos;</span>, {
+  update(id, data) {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.resolve(data);
+  },
+
+  patch(id, data) {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.resolve(data);
+  }
+});
+
+<span class="hljs-keyword">const</span> messages = app.service(<span class="hljs-string">&apos;my/messages&apos;</span>);
+
+messages.on(<span class="hljs-string">&apos;updated&apos;</span>, (message, context) =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;updated&apos;</span>, message));
+messages.on(<span class="hljs-string">&apos;patched&apos;</span>, message =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;patched&apos;</span>, message));
+
+messages.update(<span class="hljs-number">0</span>, {
+  text: <span class="hljs-string">&apos;updated message&apos;</span>
+});
+
+messages.patch(<span class="hljs-number">0</span>, {
+  text: <span class="hljs-string">&apos;patched message&apos;</span>
+});
+</code></pre>
+<h3 id="removed">removed</h3>
+<p>The <code>removed</code> event will fire with the callback data when a service <code>remove</code> calls back successfully.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> feathers = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@feathersjs/feathers&apos;</span>);
+<span class="hljs-keyword">const</span> app = feathers();
+
+app.use(<span class="hljs-string">&apos;/messages&apos;</span>, {
+  remove(id, params) {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.resolve({ id });
+  }
+});
+
+<span class="hljs-keyword">const</span> messages = app.service(<span class="hljs-string">&apos;messages&apos;</span>);
+
+messages.on(<span class="hljs-string">&apos;removed&apos;</span>, (message, context) =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;removed&apos;</span>, message));
+messages.remove(<span class="hljs-number">1</span>);
+</code></pre>
+<h2 id="custom-events">Custom events</h2>
+<p>By default, real-time clients will only receive the <a href="#service-events">standard events</a>. However, it is possible to define a list of custom events on a service as <code>service.events</code> that should also be passed when <code>service.emit(&apos;customevent&apos;, data)</code> is called on the server. The <code>context</code> for custom events won&apos;t be a full hook context but just an object containing <code>{ app, service, path, result }</code>.</p>
+<blockquote>
+<p><strong>Important:</strong> The <a href="databases/common.html">database adapters</a> also take a list of custom events as an <a href="databases/common.html#serviceoptions">initialization option</a>.</p>
+</blockquote>
+<!-- -->
+<blockquote>
+<p><strong>Important:</strong> Custom events can only be sent from the server to the client, not the other way (client to server). <a href="../faq/readme.html#how-do-i-create-custom-methods">Learn more</a></p>
+</blockquote>
+<p>For example, a payment service that sends status events to the client while processing a payment could look like this:</p>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PaymentService</span> </span>{
+  <span class="hljs-keyword">constructor</span>() {
+    <span class="hljs-keyword">this</span>.events = [<span class="hljs-string">&apos;status&apos;</span>];
+  },
+
+  create(data, params) {
+    createStripeCustomer(params.user).then(customer =&gt; {
+      <span class="hljs-keyword">this</span>.emit(<span class="hljs-string">&apos;status&apos;</span>, { status: <span class="hljs-string">&apos;created&apos;</span> });
+      <span class="hljs-keyword">return</span> createPayment(data).then(result =&gt; {
+        <span class="hljs-keyword">this</span>.emit(<span class="hljs-string">&apos;status&apos;</span>, { status: <span class="hljs-string">&apos;completed&apos;</span> });
+      });
+    });
+  }
+}
+</code></pre>
+<p>Using <code>service.emit</code> custom events can also be sent in a hook:</p>
+<pre><code class="lang-js">app.service(<span class="hljs-string">&apos;payments&apos;</span>).hooks({
+  after: {
+    create(context) {
+      context.service.emit(<span class="hljs-string">&apos;status&apos;</span>, { status: <span class="hljs-string">&apos;completed&apos;</span> });
+    }
+  }
+});
+</code></pre>
+<p>Custom events can be <a href="channels.html#publishing">published through channels</a> just like standard events and listened to it in a <a href="client.html">Feathers client</a> or <a href="client/socketio.html#listening-to-events">directly on the socket connection</a>:</p>
+<pre><code class="lang-js">client.service(<span class="hljs-string">&apos;payments&apos;</span>).on(<span class="hljs-string">&apos;status&apos;</span>, data =&gt; {});
+
+socket.on(<span class="hljs-string">&apos;payments status&apos;</span>, data =&gt; {});
+</code></pre>
+
+                                
+  <blockquote>
+    <p>
+        Is anything wrong, unclear, missing?
+        <a target="_blank" href="https://github.com/feathersjs/docs/issues/new?title=Comment: Events (api/events.md)">Leave a comment</a> or
+        <a target="_blank" href="https://github.com/feathersjs/docs/edit/master/api/events.md">edit this page</a>.
+    </p>
+  </blockquote>
+
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="hooks.html" class="navigation navigation-prev " aria-label="Previous page: Hooks">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="channels.html" class="navigation navigation-next " aria-label="Next page: Channels">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Events","level":"1.3.1.4","depth":3,"next":{"title":"Channels","level":"1.3.1.5","depth":3,"path":"api/channels.md","ref":"api/channels.md","articles":[]},"previous":{"title":"Hooks","level":"1.3.1.3","depth":3,"path":"api/hooks.md","ref":"api/hooks.md","articles":[]},"dir":"ltr"},"config":{"plugins":["feathers-collapsible-menu","heading-anchors","include-codeblock","edit-link","feathers-versions","advanced-emoji","codetabs","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"livereload":{},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"feathers-versions":{},"versions":{"gitbookConfigURL":"https://rawgit.com/feathersjs/feathers-docs/master/book.json","options":[{"value":"https://crow.docs.feathersjs.com","text":"Next version - Crow"},{"value":"https://docs.feathersjs.com","text":"Latest Stable - Buzzard"},{"value":"https://auk.docs.feathersjs.com","text":"Previous release - Auk"},{"value":"https://legacy.docs.feathersjs.com","text":"Legacy"}]},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/feathersjs/docs/edit/master","placement":"left"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"feathers-collapsible-menu":{},"menu":{"deep":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FeathersJS","gitbook":"*"},"file":{"path":"api/events.md","mtime":"2018-10-21T12:11:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-21T18:29:49.010Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-feathers-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-feathers-versions/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

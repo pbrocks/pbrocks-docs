@@ -1,0 +1,1702 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Migrating · FeathersJS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-feathers-versions/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="SECURITY.html" />
+    
+    
+    <link rel="prev" href="api/databases/querying.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="guides/readme.html">
+            
+                <a href="guides/readme.html">
+            
+                    
+                    Guides
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="guides/basics/readme.html">
+            
+                <a href="guides/basics/readme.html">
+            
+                    
+                    The Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="guides/basics/setup.html">
+            
+                <a href="guides/basics/setup.html">
+            
+                    
+                    Setting up
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="guides/basics/starting.html">
+            
+                <a href="guides/basics/starting.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="guides/basics/services.html">
+            
+                <a href="guides/basics/services.html">
+            
+                    
+                    Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="guides/basics/hooks.html">
+            
+                <a href="guides/basics/hooks.html">
+            
+                    
+                    Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="guides/basics/rest.html">
+            
+                <a href="guides/basics/rest.html">
+            
+                    
+                    REST APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="guides/basics/databases.html">
+            
+                <a href="guides/basics/databases.html">
+            
+                    
+                    Databases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="guides/basics/real-time.html">
+            
+                <a href="guides/basics/real-time.html">
+            
+                    
+                    Real-time APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.8" data-path="guides/basics/clients.html">
+            
+                <a href="guides/basics/clients.html">
+            
+                    
+                    Clients
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.9" data-path="guides/basics/generator.html">
+            
+                <a href="guides/basics/generator.html">
+            
+                    
+                    The generator (CLI)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="guides/chat/readme.html">
+            
+                <a href="guides/chat/readme.html">
+            
+                    
+                    A Chat Application
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="guides/chat/creating.html">
+            
+                <a href="guides/chat/creating.html">
+            
+                    
+                    Creating the application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="guides/chat/service.html">
+            
+                <a href="guides/chat/service.html">
+            
+                    
+                    Generating a service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="guides/chat/authentication.html">
+            
+                <a href="guides/chat/authentication.html">
+            
+                    
+                    Adding authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="guides/chat/processing.html">
+            
+                <a href="guides/chat/processing.html">
+            
+                    
+                    Processing data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="guides/chat/frontend.html">
+            
+                <a href="guides/chat/frontend.html">
+            
+                    
+                    Building a frontend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="guides/chat/testing.html">
+            
+                <a href="guides/chat/testing.html">
+            
+                    
+                    Writing tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="guides/frameworks/readme.html">
+            
+                <a href="guides/frameworks/readme.html">
+            
+                    
+                    Frameworks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="guides/auth/readme.html">
+            
+                <a href="guides/auth/readme.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="guides/auth/how-jwt-works.html">
+            
+                <a href="guides/auth/how-jwt-works.html">
+            
+                    
+                    How JWT works
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="guides/auth/recipe.express-middleware.html">
+            
+                <a href="guides/auth/recipe.express-middleware.html">
+            
+                    
+                    Recipe: Express middleware (SSR)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="guides/auth/recipe.customize-response.html">
+            
+                <a href="guides/auth/recipe.customize-response.html">
+            
+                    
+                    Recipe: Custom Login Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="guides/auth/recipe.customize-jwt-payload.html">
+            
+                <a href="guides/auth/recipe.customize-jwt-payload.html">
+            
+                    
+                    Recipe: Custom JWT Payload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="guides/auth/recipe.mixed-auth.html">
+            
+                <a href="guides/auth/recipe.mixed-auth.html">
+            
+                    
+                    Recipe: Mixed Auth Endpoints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="guides/auth/recipe.oauth-basic.html">
+            
+                <a href="guides/auth/recipe.oauth-basic.html">
+            
+                    
+                    Recipe: Basic OAuth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="guides/auth/recipe.custom-auth-strategy.html">
+            
+                <a href="guides/auth/recipe.custom-auth-strategy.html">
+            
+                    
+                    Recipe: Custom Auth Strategies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="guides/advanced/readme.html">
+            
+                <a href="guides/advanced/readme.html">
+            
+                    
+                    Advanced Topics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="guides/advanced/file-uploading.html">
+            
+                <a href="guides/advanced/file-uploading.html">
+            
+                    
+                    Uploading files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="guides/advanced/using-a-view-engine.html">
+            
+                <a href="guides/advanced/using-a-view-engine.html">
+            
+                    
+                    Using a view engine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="guides/advanced/scaling.html">
+            
+                <a href="guides/advanced/scaling.html">
+            
+                    
+                    Scaling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="guides/advanced/creating-a-plugin.html">
+            
+                <a href="guides/advanced/creating-a-plugin.html">
+            
+                    
+                    Creating a plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="api/readme.html">
+            
+                <a href="api/readme.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    Core
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="api/application.html">
+            
+                <a href="api/application.html">
+            
+                    
+                    Application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="api/services.html">
+            
+                <a href="api/services.html">
+            
+                    
+                    Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="api/hooks.html">
+            
+                <a href="api/hooks.html">
+            
+                    
+                    Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="api/events.html">
+            
+                <a href="api/events.html">
+            
+                    
+                    Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="api/channels.html">
+            
+                <a href="api/channels.html">
+            
+                    
+                    Channels
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="api/errors.html">
+            
+                <a href="api/errors.html">
+            
+                    
+                    Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="api/configuration.html">
+            
+                <a href="api/configuration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    Transports
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="api/express.html">
+            
+                <a href="api/express.html">
+            
+                    
+                    Express
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="api/socketio.html">
+            
+                <a href="api/socketio.html">
+            
+                    
+                    Socket.io
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="api/primus.html">
+            
+                <a href="api/primus.html">
+            
+                    
+                    Primus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    Client
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="api/client.html">
+            
+                <a href="api/client.html">
+            
+                    
+                    Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="api/client/rest.html">
+            
+                <a href="api/client/rest.html">
+            
+                    
+                    REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="api/client/socketio.html">
+            
+                <a href="api/client/socketio.html">
+            
+                    
+                    Socket.io
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="api/client/primus.html">
+            
+                <a href="api/client/primus.html">
+            
+                    
+                    Primus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    Authentication
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="api/authentication/server.html">
+            
+                <a href="api/authentication/server.html">
+            
+                    
+                    Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="api/authentication/client.html">
+            
+                <a href="api/authentication/client.html">
+            
+                    
+                    Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="api/authentication/local.html">
+            
+                <a href="api/authentication/local.html">
+            
+                    
+                    Local
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="api/authentication/jwt.html">
+            
+                <a href="api/authentication/jwt.html">
+            
+                    
+                    JWT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="api/authentication/oauth1.html">
+            
+                <a href="api/authentication/oauth1.html">
+            
+                    
+                    OAuth1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="api/authentication/oauth2.html">
+            
+                <a href="api/authentication/oauth2.html">
+            
+                    
+                    OAuth2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" >
+            
+                <span>
+            
+                    
+                    Database
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="api/databases/adapters.html">
+            
+                <a href="api/databases/adapters.html">
+            
+                    
+                    Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="api/databases/common.html">
+            
+                <a href="api/databases/common.html">
+            
+                    
+                    Common API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="api/databases/querying.html">
+            
+                <a href="api/databases/querying.html">
+            
+                    
+                    Querying
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="migrating.html">
+            
+                <a href="migrating.html">
+            
+                    
+                    Migrating
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="SECURITY.html">
+            
+                <a href="SECURITY.html">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <a target="_blank" href="https://github.com/feathersjs/awesome-feathersjs">
+            
+                    
+                    Ecosystem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="help/readme.html">
+            
+                <a href="help/readme.html">
+            
+                    
+                    Help
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="faq/readme.html">
+            
+                <a href="faq/readme.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="contributing/readme.html">
+            
+                <a href="contributing/readme.html">
+            
+                    
+                    Contributing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="license.html">
+            
+                <a href="license.html">
+            
+                    
+                    License
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Migrating</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+  
+                                <h1 id="feathers-v3-buzzard">Feathers v3 (Buzzard)</h1>
+<p>Feathers v3 comes with some great improvements and new features and we highly recommend to upgrade as soon as possible. It might look a little daunting at first but in almost every case, the new CLI will get you almost all the way there automatically. This page contains information about the quick upgrade path and more information about all the changes to upgrade from Feathers v2 to v3.</p>
+<p>Read the release post at <a href="https://blog.feathersjs.com/flying-into-2018-13bda623f089" target="_blank">Flying into 2018</a></p>
+<h2 id="quick-upgrade">Quick upgrade</h2>
+<p>To quickly upgrade any Feathers plugin or application you can use the <code>upgrade</code> command from the new CLI. First, if you have it installed, uninstall the old <code>feathers-cli</code>:</p>
+<pre><code>npm uninstall feathers-cli -g
+</code></pre><p>Then install <code>@feathersjs/cli</code> and upgrade a project:</p>
+<pre><code>npm install @feathersjs/cli -g
+cd path/to/project
+feathers upgrade
+</code></pre><blockquote>
+<p>The CLI will use the <code>directories.lib</code> in your <code>package.json</code> to know where your source files are located, defaulting to <code>src</code> if none provided. If you have a transpiled app/module, e.g. with babel, including a <code>lib</code> AND a <code>src</code> folder, then the most simple is to change the <code>directories.lib</code> in your <code>package.json</code> to <code>src</code>instead of <code>lib</code> so that the CLI will correctly upgrade the original source files and not the transpiled ones.</p>
+</blockquote>
+<p>In short (for more details see below) this will:</p>
+<ul>
+<li>Upgrade all core packages to the new scoped package names and their latest versions</li>
+<li>Remove all <code>feathers-hooks</code> imports and single line <code>app.configure(hooks());</code> (chained <code>.configure(hooks())</code> calls will have to be removed manually))</li>
+<li>Add Express compatibility to any application that uses <code>feathers-rest</code> (other Feathers apps without <code>feathers-rest</code> have to be updated manually)</li>
+<li>Remove all <code>.filter</code> imports and calls to <code>service.filter</code> which has been replaced by channel functionality</li>
+</ul>
+<h3 id="adding-channels">Adding channels</h3>
+<p>If you are using real-time (with Socket.io or Primus), add the following file as <code>src/channels.js</code>:</p>
+<pre><code class="lang-js"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">app</span>) </span>{
+  <span class="hljs-keyword">if</span>(<span class="hljs-keyword">typeof</span> app.channel !== <span class="hljs-string">&apos;function&apos;</span>) {
+    <span class="hljs-comment">// If no real-time functionality has been configured just return</span>
+    <span class="hljs-keyword">return</span>;
+  }
+
+  app.on(<span class="hljs-string">&apos;connection&apos;</span>, connection =&gt; {
+    <span class="hljs-comment">// On a new real-time connection, add it to the anonymous channel</span>
+    app.channel(<span class="hljs-string">&apos;anonymous&apos;</span>).join(connection);
+  });
+
+  app.on(<span class="hljs-string">&apos;login&apos;</span>, (authResult, { connection }) =&gt; {
+    <span class="hljs-comment">// connection can be undefined if there is no</span>
+    <span class="hljs-comment">// real-time connection, e.g. when logging in via REST</span>
+    <span class="hljs-keyword">if</span>(connection) {
+      <span class="hljs-comment">// Obtain the logged in user from the connection</span>
+      <span class="hljs-comment">// const user = connection.user;</span>
+
+      <span class="hljs-comment">// The connection is no longer anonymous, remove it</span>
+      app.channel(<span class="hljs-string">&apos;anonymous&apos;</span>).leave(connection);
+
+      <span class="hljs-comment">// Add it to the authenticated user channel</span>
+      app.channel(<span class="hljs-string">&apos;authenticated&apos;</span>).join(connection);
+
+      <span class="hljs-comment">// Channels can be named anything and joined on any condition </span>
+
+      <span class="hljs-comment">// E.g. to send real-time events only to admins use</span>
+      <span class="hljs-comment">// if(user.isAdmin) { app.channel(&apos;admins&apos;).join(connection); }</span>
+
+      <span class="hljs-comment">// If the user has joined e.g. chat rooms</span>
+      <span class="hljs-comment">// if(Array.isArray(user.rooms)) user.rooms.forEach(room =&gt; app.channel(`rooms/${room.id}`).join(channel));</span>
+
+      <span class="hljs-comment">// Easily organize users by email and userid for things like messaging</span>
+      <span class="hljs-comment">// app.channel(`emails/${user.email}`).join(channel);</span>
+      <span class="hljs-comment">// app.channel(`userIds/$(user.id}`).join(channel);</span>
+    }
+  });
+
+  app.publish((data, hook) =&gt; { <span class="hljs-comment">// eslint-disable-line no-unused-vars</span>
+    <span class="hljs-comment">// Here you can add event publishers to channels set up in `channels.js`</span>
+    <span class="hljs-comment">// To publish only for a specific event use `app.publish(eventname, () =&gt; {})`</span>
+
+    <span class="hljs-comment">// e.g. to publish all service events to all authenticated users use</span>
+    <span class="hljs-keyword">return</span> app.channel(<span class="hljs-string">&apos;authenticated&apos;</span>);
+  });
+
+  <span class="hljs-comment">// Here you can also add service specific event publishers</span>
+  <span class="hljs-comment">// e..g the publish the `users` service `created` event to the `admins` channel</span>
+  <span class="hljs-comment">// app.service(&apos;users&apos;).publish(&apos;created&apos;, () =&gt; app.channel(&apos;admins&apos;));</span>
+
+  <span class="hljs-comment">// With the userid and email organization from above you can easily select involved users</span>
+  <span class="hljs-comment">// app.service(&apos;messages&apos;).publish(() =&gt; {</span>
+  <span class="hljs-comment">//   return [</span>
+  <span class="hljs-comment">//     app.channel(`userIds/${data.createdBy}`),</span>
+  <span class="hljs-comment">//     app.channel(`emails/${data.recipientEmail}`)</span>
+  <span class="hljs-comment">//   ];</span>
+  <span class="hljs-comment">// });</span>
+};
+</code></pre>
+<p>And require and configure it in <code>src/app.js</code> (note that it should be configured after all services so that <code>channels.js</code> can register service specific publishers):</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> channels = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./channels&apos;</span>);
+
+<span class="hljs-comment">// After `app.configure(services)`</span>
+app.configure(channels);
+</code></pre>
+<blockquote>
+<p><strong>Very important:</strong> The <code>channels.js</code> file shown above will publish all real-time events to all authenticated users. This is already safer than the previous default but you should carefully review the <a href="api/channels.html">channels</a> documentation and implement appropriate channels so that only the right users are going to receive real-time events.</p>
+</blockquote>
+<p>Once you migrated your application to channels you can remove all <code>&lt;servicename&gt;.filter.js</code> files.</p>
+<h3 id="protecting-fields">Protecting fields</h3>
+<p>Feathers v3 has a new mechanism to ensure that sensitive information never gets published to any client. To protect always protect the user password, add the <a href="api/authentication/local.html#protect">protect hook</a> in <code>src/services/users/users.hooks.js</code> instead of the <code>remove(&apos;password&apos;)</code> hook:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { hashPassword } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@feathersjs/authentication-local&apos;</span>).hooks;
+<span class="hljs-keyword">const</span> { hashPassword, protect } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@feathersjs/authentication-local&apos;</span>).hooks;
+
+<span class="hljs-built_in">module</span>.exports = {
+  before: {
+    all: [],
+    find: [ authenticate(<span class="hljs-string">&apos;jwt&apos;</span>) ],
+    get: [],
+    create: [],
+    update: [],
+    patch: [],
+    remove: []
+  },
+
+  after: {
+    all: [
+      <span class="hljs-comment">// Make sure the password field is never sent to the client</span>
+      <span class="hljs-comment">// Always must be the last hook</span>
+      protect(<span class="hljs-string">&apos;password&apos;</span>)
+    ],
+    find: [],
+    get: [],
+    create: [],
+    update: [],
+    patch: [],
+    remove: []
+  },
+
+  error: {
+    all: [],
+    find: [],
+    get: [],
+    create: [],
+    update: [],
+    patch: [],
+    remove: []
+  }
+};
+</code></pre>
+<h2 id="updating-client-side-applications">Updating client side applications</h2>
+<p>Client side Feathers applications can also be updated using the CLI but may need some manual intervention. Most importantly, since Feathers core now natively ships as ES6 code, the module bundler, like Webpack, has to be instructed to transpile it. More information can be found in the <a href="api/client.html">client chapter</a>. For Webpack and <code>create-react-app</code> usage (which both will throw a minification error without changes), see <a href="api/client.html#webpack">this section</a>.</p>
+<h2 id="feathersjs-npm-scope"><code>@feathersjs</code> npm scope</h2>
+<p>All Feathers core modules have been moved to the <code>@feathersjs</code> npm scope. This makes it more clear which modules are considered core and which modules are community supported and also allows us to more easily manage publishing permissions. The following modules have been renamed:</p>
+<h3 id="main-feathers">Main Feathers</h3>
+<table>
+<thead>
+<tr>
+<th>Old name</th>
+<th>Scoped name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>feathers</td>
+<td>@feathersjs/feathers</td>
+</tr>
+<tr>
+<td>feathers-cli</td>
+<td>@feathersjs/cli</td>
+</tr>
+<tr>
+<td>feathers-commons</td>
+<td>@feathersjs/commons</td>
+</tr>
+<tr>
+<td>feathers-rest</td>
+<td>@feathersjs/express/rest</td>
+</tr>
+<tr>
+<td>feathers-socketio</td>
+<td>@feathersjs/socketio</td>
+</tr>
+<tr>
+<td>feathers-primus</td>
+<td>@feathersjs/primus</td>
+</tr>
+<tr>
+<td>feathers-errors</td>
+<td>@feathersjs/errors</td>
+</tr>
+<tr>
+<td>feathers-configuration</td>
+<td>@feathersjs/configuration</td>
+</tr>
+<tr>
+<td>feathers-socket-commons</td>
+<td>@feathersjs/socket-commons</td>
+</tr>
+</tbody>
+</table>
+<h3 id="authentication">Authentication</h3>
+<table>
+<thead>
+<tr>
+<th>Old name</th>
+<th>Scoped name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>feathers-authentication</td>
+<td>@feathersjs/authentication</td>
+</tr>
+<tr>
+<td>feathers-authentication-jwt</td>
+<td>@feathersjs/authentication-jwt</td>
+</tr>
+<tr>
+<td>feathers-authentication-local</td>
+<td>@feathersjs/authentication-local</td>
+</tr>
+<tr>
+<td>feathers-authentication-oauth1</td>
+<td>@feathersjs/authentication-oauth1</td>
+</tr>
+<tr>
+<td>feathers-authentication-oauth2</td>
+<td>@feathersjs/authentication-oauth2</td>
+</tr>
+<tr>
+<td>feathers-authentication-client</td>
+<td>@feathersjs/authentication-client</td>
+</tr>
+</tbody>
+</table>
+<h3 id="client-side-feathers">Client side Feathers</h3>
+<table>
+<thead>
+<tr>
+<th>Old name</th>
+<th>Scoped name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>feathers/client</td>
+<td>@feathersjs/feathers</td>
+</tr>
+<tr>
+<td>feathers-client</td>
+<td>@feathersjs/client</td>
+</tr>
+<tr>
+<td>feathers-rest/client</td>
+<td>@feathersjs/rest-client</td>
+</tr>
+<tr>
+<td>feathers-socketio/client</td>
+<td>@feathersjs/socketio-client</td>
+</tr>
+<tr>
+<td>feathers-primus/client</td>
+<td>@feathersjs/primus-client</td>
+</tr>
+<tr>
+<td>feathers-authentication/client</td>
+<td>@feathersjs/authentication-client</td>
+</tr>
+</tbody>
+</table>
+<h2 id="documentation-changes">Documentation changes</h2>
+<p>With a better focus on Feathers core, the repositories, documentation and guides for non-core module have been moved to more appropriate locations:</p>
+<ul>
+<li>Non-core modules have been moved to the <a href="https://github.com/feathersjs-ecosystem/" target="_blank">feathersjs-ecosystem</a> and <a href="https://github.com/feathers-plus/" target="_blank">feathers-plus</a> organizations. <em>Documentation for those modules can be found in the Readme file of their respective GitHub repositories.</em></li>
+<li>Database adapter specific documentation can now be found in the respective repositories readme. Links to the repositories can be found in the <a href="api/databases/adapters.html">database adapters chapter</a></li>
+<li>The <code>feathers-hooks-common</code> documentation can be found at <a href="https://feathers-plus.github.io/v1/feathers-hooks-common/" target="_blank">feathers-plus.github.io/v1/feathers-hooks-common/</a></li>
+<li>Offline and authentication-management documentation can also be found at <a href="https://feathers-plus.github.io/" target="_blank">feathers-plus.github.io</a></li>
+<li>The Ecosystem page now points to <a href="https://github.com/feathersjs/awesome-feathersjs" target="_blank">awesome-feathersjs</a></li>
+</ul>
+<h2 id="framework-independent">Framework independent</h2>
+<p><code>@feathersjs/feathers</code> v3 is framework independent and will work on the client and in Node out of the box. This means that it is not extending Express by default anymore.</p>
+<p>Instead <code>@feathersjs/express</code> provides the framework bindings and the REST provider (previously <code>feathers-rest</code>) in either <code>require(&apos;@feathersjs/express&apos;).rest</code> or <code>@feathersjs/express/rest</code>. <code>@feathersjs/express</code> also brings Express built-in middleware like <code>express.static</code> and the recently included <code>express.json</code> and <code>express.urlencoded</code> body parsers. Once a Feathers application is &quot;expressified&quot; it can be used like the previous version:</p>
+<p><strong>Before</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> feathers = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;feathers&apos;</span>);
+<span class="hljs-keyword">const</span> bodyParser = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;body-parser&apos;</span>);
+<span class="hljs-keyword">const</span> rest = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;feathers-rest&apos;</span>);
+<span class="hljs-keyword">const</span> errorHandler = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;feathers-errors/handler&apos;</span>);
+
+<span class="hljs-keyword">const</span> app = feathers();
+
+app.configure(rest());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: <span class="hljs-literal">true</span> }));
+
+<span class="hljs-comment">// Register an Express middleware</span>
+app.get(<span class="hljs-string">&apos;/somewhere&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+  res.json({ message: <span class="hljs-string">&apos;Data from somewhere middleware&apos;</span> });
+});
+<span class="hljs-comment">// Statically host some files</span>
+app.use(<span class="hljs-string">&apos;/&apos;</span>, feathers.static(__dirname));
+
+<span class="hljs-comment">// Use a Feathers friendly Express error handler</span>
+app.use(errorHandler());
+</code></pre>
+<p><strong>Now</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> feathers = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@feathersjs/feathers&apos;</span>);
+<span class="hljs-keyword">const</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@feathersjs/express&apos;</span>);
+
+<span class="hljs-comment">// Create an Express compatible Feathers application</span>
+<span class="hljs-keyword">const</span> app = express(feathers());
+
+<span class="hljs-comment">// Add body parsing middleware</span>
+app.use(express.json());
+app.use(express.urlencoded({ extended: <span class="hljs-literal">true</span> }));
+<span class="hljs-comment">// Initialize REST provider (previous in `feathers-rest`)</span>
+app.configure(express.rest());
+
+<span class="hljs-comment">// Register an Express middleware</span>
+app.get(<span class="hljs-string">&apos;/somewhere&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+  res.json({ message: <span class="hljs-string">&apos;Data from somewhere middleware&apos;</span> });
+});
+<span class="hljs-comment">// Statically host some files</span>
+app.use(<span class="hljs-string">&apos;/&apos;</span>, express.static(__dirname));
+
+<span class="hljs-comment">// Use a Feathers friendly Express error handler</span>
+app.use(express.errorHandler());
+</code></pre>
+<h2 id="hooks-in-core">Hooks in core</h2>
+<p>The <code>feathers-hooks</code> plugin is now a part of core and no longer has to be imported and configured. All services will have hook functionality included right away. Additionally it is now also possible to define different data that should be sent to the client in <code>hook.dispatch</code> which allows to properly secure properties that should not be shown to a client.</p>
+<p><strong>Before</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> feathers = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;feathers&apos;</span>);
+<span class="hljs-keyword">const</span> hooks = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;feathers-hooks&apos;</span>);
+
+<span class="hljs-keyword">const</span> app = feathers();
+
+app.configure(hooks());
+app.use(<span class="hljs-string">&apos;/todos&apos;</span>, {
+  get(id) {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.resolve({
+      message: <span class="hljs-string">`You have to do <span class="hljs-subst">${id}</span>`</span>
+    });
+  }
+});
+
+app.service(<span class="hljs-string">&apos;todos&apos;</span>).hooks({
+  after: {
+    get(hook) {
+      hook.result.message = <span class="hljs-string">`<span class="hljs-subst">${hook.result.message}</span>!`</span>;
+    }
+  }
+});
+</code></pre>
+<p><strong>Now</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> feathers = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;feathers&apos;</span>);
+
+<span class="hljs-keyword">const</span> app = feathers();
+
+app.use(<span class="hljs-string">&apos;/todos&apos;</span>, {
+  get(id) {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.resolve({
+      message: <span class="hljs-string">`You have to do <span class="hljs-subst">${id}</span>`</span>
+    });
+  }
+});
+
+app.service(<span class="hljs-string">&apos;todos&apos;</span>).hooks({
+  after: {
+    get(hook) {
+      hook.result.message = <span class="hljs-string">`<span class="hljs-subst">${hook.result.message}</span>!`</span>;
+    }
+  }
+});
+</code></pre>
+<h2 id="event-channels-and-publishing">Event channels and publishing</h2>
+<p>Previously, filters were used to run for every event and every connection to determine if the event should be sent or not.</p>
+<p>Event channels are a more secure and performant way to define which connections to send real-time events to. Instead of running for every event and every connection you define once which channels a connection belongs to when it is established or authenticated.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// On login and if it is a real-time connectionn, add the connection to the `authenticated` channel</span>
+app.on(<span class="hljs-string">&apos;login&apos;</span>, (authResult, { connection }) =&gt; {
+  <span class="hljs-keyword">if</span>(connection) {
+    <span class="hljs-keyword">const</span> { user } = connection;
+
+    app.channel(<span class="hljs-string">&apos;authenticated&apos;</span>).join(connection);
+  }
+});
+
+<span class="hljs-comment">// Publish only `created` events from the `messages` service</span>
+app.service(<span class="hljs-string">&apos;messages&apos;</span>).publish(<span class="hljs-string">&apos;created&apos;</span>, (data, context) =&gt; app.channel(<span class="hljs-string">&apos;authenticated&apos;</span>));
+
+<span class="hljs-comment">// Publish all real-time events from all services to the authenticated channel</span>
+app.publish((data, context) =&gt; app.channel(<span class="hljs-string">&apos;authenticated&apos;</span>));
+</code></pre>
+<p>To only publish to rooms a user is in:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// On login and if it is a real-time connection, add the connection to the `authenticated` channel</span>
+app.on(<span class="hljs-string">&apos;login&apos;</span>, (authResult, { connection }) =&gt; {
+  <span class="hljs-keyword">if</span>(connection) {
+    <span class="hljs-keyword">const</span> { user } = connection;
+
+    <span class="hljs-comment">// Join `authenticated` channel</span>
+    app.channel(<span class="hljs-string">&apos;authenticated&apos;</span>).join(connection);
+
+    <span class="hljs-comment">// Join rooms channels for that user</span>
+    rooms.forEach(roomId =&gt; app.channel(<span class="hljs-string">`rooms/<span class="hljs-subst">${roomId}</span>`</span>).join(connection));
+  }
+});
+</code></pre>
+<h2 id="better-separation-of-client-and-server-side-modules">Better separation of client and server side modules</h2>
+<p>Feathers core was working on the client and the server since v2 but it wasn&apos;t always entirely clear which related modules should be used how. Now all client side connectors are located in their own repositories while the main Feathers repository can be required the same way on the client and the server.</p>
+<p><strong>Before</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> io = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;socket.io-client&apos;</span>);
+<span class="hljs-keyword">const</span> feathers = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;feathers/client&apos;</span>);
+<span class="hljs-keyword">const</span> hooks = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;feathers-hooks&apos;</span>);
+<span class="hljs-keyword">const</span> socketio = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;feathers-socketio/client&apos;</span>);
+<span class="hljs-keyword">const</span> auth = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;feathers-authentication-client&apos;</span>);
+
+<span class="hljs-keyword">const</span> socket = io();
+<span class="hljs-keyword">const</span> app = feathers()
+  .configure(hooks())
+  .configure(socketio(socket))
+  .configure(auth());
+</code></pre>
+<p><strong>Now</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> io = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;socket.io-client&apos;</span>);
+<span class="hljs-keyword">const</span> feathers = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@feathersjs/feathers&apos;</span>);
+<span class="hljs-keyword">const</span> socketio = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@feathersjs/socketio-client&apos;</span>);
+<span class="hljs-keyword">const</span> auth = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@feathersjs/authentication-client&apos;</span>);
+
+<span class="hljs-keyword">const</span> socket = io();
+<span class="hljs-keyword">const</span> app = feathers()
+  .configure(socketio(socket))
+  .configure(auth());
+</code></pre>
+<h2 id="node-6">Node 6+</h2>
+<p>The core repositories mentioned above also have been migrated to be directly usable (e.g. when npm installing the repository as a Git/GitHub dependency) without requiring a Babel transpilation step.</p>
+<p>Since all repositories make extensive use of ES6 that also means that Node 4 is no longer supported.</p>
+<p>Also see <a href="https://github.com/feathersjs/feathers/issues/608" target="_blank">/feathers/issues/608</a>.</p>
+<h2 id="a-new-socket-message-format">A new Socket message format</h2>
+<p>The websocket messaging format has been updated to support proper error messages when trying to call a non-existing service or method (instead of just timing out). Using the new <code>@feathersjs/socketio-client</code> and <code>@feathersjs/primus-client</code> will automatically use that format. You can find the details in the <a href="api/client/socketio.html">Socket.io client</a> and <a href="api/client/primus.html">Primus client</a> documentation.</p>
+<blockquote>
+<p><strong>Note:</strong> The old message format is still supported so the clients do not have to be updated at the same time.</p>
+</blockquote>
+<h2 id="deprecations-and-other-api-changes">Deprecations and other API changes</h2>
+<ul>
+<li>Callbacks are no longer supported in Feathers service methods. All service methods always return a Promise. Custom services must return a Promise or use <code>async/await</code>.</li>
+<li><code>service.before</code> and <code>service.after</code> have been replaced with a single <code>app.hooks({ before, after })</code></li>
+<li><code>app.service(path)</code> only returns a service and cannot be used to register a new service anymore (via <code>app.service(path, service)</code>). Use <code>app.use(path, service)</code> instead.</li>
+<li>Route parameters which were previously added directly to <code>params</code> are now in <code>params.route</code></li>
+<li>Express middleware like <code>feathers.static</code> is now located in <code>const express = require(&apos;@feathersjs/express&apos;)</code> using <code>express.static</code></li>
+<li>Experimental TypeScript definitions have been removed from all core repositories. Development of TypeScript definitions for this version can be follow at <a href="https://github.com/feathersjs-ecosystem/feathers-typescript" target="_blank">feathersjs-ecosystem/feathers-typescript</a>. Help welcome.</li>
+</ul>
+<h2 id="backwards-compatibility-polyfills">Backwards compatibility polyfills</h2>
+<p>Besides the steps outlined above, existing hooks, database adapters, services and other plugins should be fully compatible with Feathers v3 without any additional modifications.</p>
+<p>This section contains some quick backwards compatibility polyfills for the breaking change that can be used to make the migration easier or continue to use plugins that use deprecated syntax.</p>
+<h3 id="basic-service-filter">Basic service filter</h3>
+<p>This is a basic emulation of the previous event filter functionality. It does not use promises or allow modifying the data (which should now be handled by setting <code>hook.dispatch</code>).</p>
+<pre><code class="lang-js">app.mixins.push(service =&gt; {
+  service.mixin({
+    filter(eventName, callback) {
+      <span class="hljs-keyword">const</span> args = callback ? [ eventName ] : [];
+
+      <span class="hljs-comment">// todos.filter(&apos;created&apos;, function(data, connection, hook) {});</span>
+      <span class="hljs-keyword">if</span>(!callback) {
+        callback = eventName;
+      }
+
+      <span class="hljs-comment">// A publisher function that sends to the `authenticated`</span>
+      <span class="hljs-comment">// channel that we defined in the quick upgrade section above</span>
+      args.push((data, hook) =&gt; app.channel(<span class="hljs-string">&apos;authenticated&apos;</span>)
+        .filter(connection =&gt;
+          callback(data, connection, hook)
+        )
+      );
+
+      service.publish(... args);
+    }
+  });
+});
+</code></pre>
+<h3 id="route-parameters">Route parameters</h3>
+<pre><code class="lang-js">app.hooks({
+  before(hook) {
+    <span class="hljs-built_in">Object</span>.assign(hook.params, hook.params.route);
+
+    <span class="hljs-keyword">return</span> hook;
+  }
+})
+</code></pre>
+<h3 id="before-and-after-hook-registration"><code>.before</code> and <code>.after</code> hook registration</h3>
+<pre><code class="lang-js">app.mixins.push(service =&gt; {
+  service.mixin({
+    before(before) {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.hooks({ before });
+    },
+
+    after(after) {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.hooks({ after });
+    },    
+  })
+});
+</code></pre>
+
+                                
+  <blockquote>
+    <p>
+        Is anything wrong, unclear, missing?
+        <a target="_blank" href="https://github.com/feathersjs/docs/issues/new?title=Comment: Migrating (migrating.md)">Leave a comment</a> or
+        <a target="_blank" href="https://github.com/feathersjs/docs/edit/master/migrating.md">edit this page</a>.
+    </p>
+  </blockquote>
+
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="api/databases/querying.html" class="navigation navigation-prev " aria-label="Previous page: Querying">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="SECURITY.html" class="navigation navigation-next " aria-label="Next page: Security">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Migrating","level":"1.4","depth":1,"next":{"title":"Security","level":"1.5","depth":1,"path":"SECURITY.md","ref":"SECURITY.md","articles":[]},"previous":{"title":"Querying","level":"1.3.5.3","depth":3,"path":"api/databases/querying.md","ref":"api/databases/querying.md","articles":[]},"dir":"ltr"},"config":{"plugins":["feathers-collapsible-menu","heading-anchors","include-codeblock","edit-link","feathers-versions","advanced-emoji","codetabs","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"livereload":{},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"feathers-versions":{},"versions":{"gitbookConfigURL":"https://rawgit.com/feathersjs/feathers-docs/master/book.json","options":[{"value":"https://crow.docs.feathersjs.com","text":"Next version - Crow"},{"value":"https://docs.feathersjs.com","text":"Latest Stable - Buzzard"},{"value":"https://auk.docs.feathersjs.com","text":"Previous release - Auk"},{"value":"https://legacy.docs.feathersjs.com","text":"Legacy"}]},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/feathersjs/docs/edit/master","placement":"left"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"feathers-collapsible-menu":{},"menu":{"deep":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FeathersJS","gitbook":"*"},"file":{"path":"migrating.md","mtime":"2018-10-21T12:11:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-21T18:29:49.010Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-feathers-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-feathers-versions/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

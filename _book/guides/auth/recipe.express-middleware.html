@@ -1,0 +1,1428 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Recipe: Express middleware (SSR) · FeathersJS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-feathers-versions/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="recipe.customize-response.html" />
+    
+    
+    <link rel="prev" href="how-jwt-works.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../readme.html">
+            
+                <a href="../readme.html">
+            
+                    
+                    Guides
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../basics/readme.html">
+            
+                <a href="../basics/readme.html">
+            
+                    
+                    The Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../basics/setup.html">
+            
+                <a href="../basics/setup.html">
+            
+                    
+                    Setting up
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../basics/starting.html">
+            
+                <a href="../basics/starting.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../basics/services.html">
+            
+                <a href="../basics/services.html">
+            
+                    
+                    Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../basics/hooks.html">
+            
+                <a href="../basics/hooks.html">
+            
+                    
+                    Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../basics/rest.html">
+            
+                <a href="../basics/rest.html">
+            
+                    
+                    REST APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="../basics/databases.html">
+            
+                <a href="../basics/databases.html">
+            
+                    
+                    Databases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="../basics/real-time.html">
+            
+                <a href="../basics/real-time.html">
+            
+                    
+                    Real-time APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.8" data-path="../basics/clients.html">
+            
+                <a href="../basics/clients.html">
+            
+                    
+                    Clients
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.9" data-path="../basics/generator.html">
+            
+                <a href="../basics/generator.html">
+            
+                    
+                    The generator (CLI)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chat/readme.html">
+            
+                <a href="../chat/readme.html">
+            
+                    
+                    A Chat Application
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../chat/creating.html">
+            
+                <a href="../chat/creating.html">
+            
+                    
+                    Creating the application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../chat/service.html">
+            
+                <a href="../chat/service.html">
+            
+                    
+                    Generating a service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../chat/authentication.html">
+            
+                <a href="../chat/authentication.html">
+            
+                    
+                    Adding authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../chat/processing.html">
+            
+                <a href="../chat/processing.html">
+            
+                    
+                    Processing data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../chat/frontend.html">
+            
+                <a href="../chat/frontend.html">
+            
+                    
+                    Building a frontend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="../chat/testing.html">
+            
+                <a href="../chat/testing.html">
+            
+                    
+                    Writing tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../frameworks/readme.html">
+            
+                <a href="../frameworks/readme.html">
+            
+                    
+                    Frameworks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="how-jwt-works.html">
+            
+                <a href="how-jwt-works.html">
+            
+                    
+                    How JWT works
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4.2" data-path="recipe.express-middleware.html">
+            
+                <a href="recipe.express-middleware.html">
+            
+                    
+                    Recipe: Express middleware (SSR)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="recipe.customize-response.html">
+            
+                <a href="recipe.customize-response.html">
+            
+                    
+                    Recipe: Custom Login Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="recipe.customize-jwt-payload.html">
+            
+                <a href="recipe.customize-jwt-payload.html">
+            
+                    
+                    Recipe: Custom JWT Payload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="recipe.mixed-auth.html">
+            
+                <a href="recipe.mixed-auth.html">
+            
+                    
+                    Recipe: Mixed Auth Endpoints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="recipe.oauth-basic.html">
+            
+                <a href="recipe.oauth-basic.html">
+            
+                    
+                    Recipe: Basic OAuth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="recipe.custom-auth-strategy.html">
+            
+                <a href="recipe.custom-auth-strategy.html">
+            
+                    
+                    Recipe: Custom Auth Strategies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../advanced/readme.html">
+            
+                <a href="../advanced/readme.html">
+            
+                    
+                    Advanced Topics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../advanced/file-uploading.html">
+            
+                <a href="../advanced/file-uploading.html">
+            
+                    
+                    Uploading files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../advanced/using-a-view-engine.html">
+            
+                <a href="../advanced/using-a-view-engine.html">
+            
+                    
+                    Using a view engine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../advanced/scaling.html">
+            
+                <a href="../advanced/scaling.html">
+            
+                    
+                    Scaling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../advanced/creating-a-plugin.html">
+            
+                <a href="../advanced/creating-a-plugin.html">
+            
+                    
+                    Creating a plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../api/readme.html">
+            
+                <a href="../../api/readme.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    Core
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../api/application.html">
+            
+                <a href="../../api/application.html">
+            
+                    
+                    Application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../api/services.html">
+            
+                <a href="../../api/services.html">
+            
+                    
+                    Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../api/hooks.html">
+            
+                <a href="../../api/hooks.html">
+            
+                    
+                    Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../api/events.html">
+            
+                <a href="../../api/events.html">
+            
+                    
+                    Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../api/channels.html">
+            
+                <a href="../../api/channels.html">
+            
+                    
+                    Channels
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../api/errors.html">
+            
+                <a href="../../api/errors.html">
+            
+                    
+                    Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../api/configuration.html">
+            
+                <a href="../../api/configuration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    Transports
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../../api/express.html">
+            
+                <a href="../../api/express.html">
+            
+                    
+                    Express
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../../api/socketio.html">
+            
+                <a href="../../api/socketio.html">
+            
+                    
+                    Socket.io
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../../api/primus.html">
+            
+                <a href="../../api/primus.html">
+            
+                    
+                    Primus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    Client
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="../../api/client.html">
+            
+                <a href="../../api/client.html">
+            
+                    
+                    Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="../../api/client/rest.html">
+            
+                <a href="../../api/client/rest.html">
+            
+                    
+                    REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="../../api/client/socketio.html">
+            
+                <a href="../../api/client/socketio.html">
+            
+                    
+                    Socket.io
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="../../api/client/primus.html">
+            
+                <a href="../../api/client/primus.html">
+            
+                    
+                    Primus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    Authentication
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="../../api/authentication/server.html">
+            
+                <a href="../../api/authentication/server.html">
+            
+                    
+                    Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="../../api/authentication/client.html">
+            
+                <a href="../../api/authentication/client.html">
+            
+                    
+                    Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="../../api/authentication/local.html">
+            
+                <a href="../../api/authentication/local.html">
+            
+                    
+                    Local
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="../../api/authentication/jwt.html">
+            
+                <a href="../../api/authentication/jwt.html">
+            
+                    
+                    JWT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="../../api/authentication/oauth1.html">
+            
+                <a href="../../api/authentication/oauth1.html">
+            
+                    
+                    OAuth1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="../../api/authentication/oauth2.html">
+            
+                <a href="../../api/authentication/oauth2.html">
+            
+                    
+                    OAuth2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" >
+            
+                <span>
+            
+                    
+                    Database
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../../api/databases/adapters.html">
+            
+                <a href="../../api/databases/adapters.html">
+            
+                    
+                    Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../../api/databases/common.html">
+            
+                <a href="../../api/databases/common.html">
+            
+                    
+                    Common API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../../api/databases/querying.html">
+            
+                <a href="../../api/databases/querying.html">
+            
+                    
+                    Querying
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../migrating.html">
+            
+                <a href="../../migrating.html">
+            
+                    
+                    Migrating
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../SECURITY.html">
+            
+                <a href="../../SECURITY.html">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <a target="_blank" href="https://github.com/feathersjs/awesome-feathersjs">
+            
+                    
+                    Ecosystem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../help/readme.html">
+            
+                <a href="../../help/readme.html">
+            
+                    
+                    Help
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../faq/readme.html">
+            
+                <a href="../../faq/readme.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../contributing/readme.html">
+            
+                <a href="../../contributing/readme.html">
+            
+                    
+                    Contributing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../license.html">
+            
+                <a href="../../license.html">
+            
+                    
+                    License
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Recipe: Express middleware (SSR)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+  
+                                <h1 id="feathersjs-auth-recipe-authenticating-express-middleware-ssr">FeathersJS Auth Recipe: Authenticating Express middleware (SSR)</h1>
+<p>Feathers authentication also supports authenticating routes of Express middleware and can be used for server side rendering. This recipe shows how to create a login form, a <code>/logout</code> endpoint and a protected <code>/chat</code> endpoint that renders all users and recent chat messages from our <a href="../chat/readme.html">chat application</a>.</p>
+<p>The key steps are:</p>
+<ol>
+<li>Obtain the JWT by either going through the oAuth or local authentication flow</li>
+<li>Set the JWT in the cookie (since the browser will send it with every request)</li>
+<li>Before any middleware that needs to be protected, add the <code>cookieParser()</code> and the <code>authenticate(&apos;jwt&apos;)</code> authentication Express middleware. This will set <code>req.user</code> from the user information in JWT or show a 401 error page if there is no JWT or it is invalid.</li>
+</ol>
+<h2 id="configuration">Configuration</h2>
+<p>In order for the browser to send the JWT with every request, cookies have to be enabled in the authentication configuration.</p>
+<blockquote>
+<p><strong>Note:</strong> If you are using oAuth2, cookies are already enabled.</p>
+</blockquote>
+<p>If not enabled yet, add the following to the <code>authentication</code> section in <code>config/default.json</code>:</p>
+<pre><code class="lang-js"><span class="hljs-string">&quot;cookie&quot;</span>: {
+  <span class="hljs-string">&quot;enabled&quot;</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;feathers-jwt&quot;</span>
+}
+</code></pre>
+<p>We want to authenticate with a username and password login by submitting a normal HTML form to the <code>/authentication</code> endpoint. By default a successful POST to that endpoint would render JSON with our JWT. This is fine for REST APIs but in our case we want to be redirected to our protected page. We can do this by setting a <code>successRedirect</code> in the <code>local</code> strategy section of the <code>authentication</code> configuration in <code>config/default.json</code>:</p>
+<pre><code class="lang-js"><span class="hljs-string">&quot;local&quot;</span>: {
+  <span class="hljs-string">&quot;entity&quot;</span>: <span class="hljs-string">&quot;user&quot;</span>,
+  <span class="hljs-string">&quot;usernameField&quot;</span>: <span class="hljs-string">&quot;email&quot;</span>,
+  <span class="hljs-string">&quot;passwordField&quot;</span>: <span class="hljs-string">&quot;password&quot;</span>,
+  <span class="hljs-string">&quot;successRedirect&quot;</span>: <span class="hljs-string">&quot;/chat&quot;</span>
+}
+</code></pre>
+<h2 id="setting-up-middleware">Setting up middleware</h2>
+<p>The <a href="../../api/authentication/jwt.html">JWT authentication strategy</a> will look for a JWT in the cookie but only routes that parse the cookie will be able to access it. This can be done with the <a href="https://github.com/expressjs/cookie-parser" target="_blank">cookie-parser Express middleware</a>:</p>
+<pre><code>npm install cookie-parser
+</code></pre><p>Now we can protect any Express route by first adding <code>cookieParser(), authenticate(&apos;jwt&apos;)</code> to the chain.</p>
+<blockquote>
+<p><strong>Note:</strong> Only register the cookie parser middleware before routes that actually need to be protected by the JWT in the cookie in order to prevent CSRF security issues.</p>
+</blockquote>
+<p>Since we want to render views on the server we have to register an <a href="http://expressjs.com/en/guide/using-template-engines.html" target="_blank">Express template engine</a>. For this example we will use <a href="https://www.npmjs.com/package/ejs" target="_blank">EJS</a>:</p>
+<pre><code>npm install ejs
+</code></pre><p>Next, we can update <code>src/middleware/index.js</code> to</p>
+<ul>
+<li>Set the view engine to EJS (the default folder for views in Express is <code>views/</code> in the root of the project)</li>
+<li>Register a <code>/login</code> route that renders <code>views/login.ejs</code></li>
+<li>Register a protected <code>/chat</code> route that gets all messages and users from the <a href="../../api/application.html">Feathers application</a> and then renders <code>views/chat.ejs</code></li>
+<li>Register a <code>/logout</code> route that deletes the cookie and redirect back to the login page</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> We could also generate the middleware using <code>feathers generate middleware</code> but since they are all fairly short we can keep it in the same file for now.</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> cookieParser = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;cookie-parser&apos;</span>);
+<span class="hljs-keyword">const</span> { authenticate } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@feathersjs/authentication&apos;</span>).express;
+
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">app</span>) </span>{
+  <span class="hljs-comment">// Use EJS as the view engine (using the `views` folder by default)</span>
+  app.set(<span class="hljs-string">&apos;view engine&apos;</span>, <span class="hljs-string">&apos;ejs&apos;</span>);
+
+  <span class="hljs-comment">// Render the /login view</span>
+  app.get(<span class="hljs-string">&apos;/login&apos;</span>, (req, res) =&gt; res.render(<span class="hljs-string">&apos;login&apos;</span>));
+
+  <span class="hljs-comment">// Render the protected chat page</span>
+  app.get(<span class="hljs-string">&apos;/chat&apos;</span>, cookieParser(), authenticate(<span class="hljs-string">&apos;jwt&apos;</span>), <span class="hljs-keyword">async</span> (req, res) =&gt; {
+    <span class="hljs-comment">// `req.user` is set by `authenticate(&apos;jwt&apos;)`</span>
+    <span class="hljs-keyword">const</span> { user } = req;
+    <span class="hljs-comment">// Since we are rendering on the server we have to pass the authenticated user</span>
+    <span class="hljs-comment">// from `req.user` as `params.user` to our services</span>
+    <span class="hljs-keyword">const</span> params = {
+      user, query: {}
+    };
+    <span class="hljs-comment">// Find the list of users</span>
+    <span class="hljs-keyword">const</span> users = <span class="hljs-keyword">await</span> app.service(<span class="hljs-string">&apos;users&apos;</span>).find(params);
+    <span class="hljs-comment">// Find the most recent messages</span>
+    <span class="hljs-keyword">const</span> messages = <span class="hljs-keyword">await</span> app.service(<span class="hljs-string">&apos;messages&apos;</span>).find(params);
+
+    res.render(<span class="hljs-string">&apos;chat&apos;</span>, { user, users, messages });
+  });
+
+  <span class="hljs-comment">// For the logout route we remove the JWT from the cookie</span>
+  <span class="hljs-comment">// and redirect back to the login page</span>
+  app.get(<span class="hljs-string">&apos;/logout&apos;</span>, cookieParser(), (req, res) =&gt; {
+    res.clearCookie(<span class="hljs-string">&apos;feathers-jwt&apos;</span>);
+    res.redirect(<span class="hljs-string">&apos;/login&apos;</span>);
+  });
+};
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> <code>npm ls @feathersjs/authentication-jwt</code> has to show that version 2.0.0 or later is installed.</p>
+</blockquote>
+<h2 id="views">Views</h2>
+<p>The login form has to make a POST request to the <code>/authentication</code> endpoint and send the same fields as any other API client would. In our case specifically:</p>
+<pre><code>{
+  &quot;strategy&quot;: &quot;local&quot;,
+  &quot;email&quot;: &quot;user@example.com&quot;,
+  &quot;password&quot;: &quot;mypassword&quot;
+}
+</code></pre><p><code>email</code> and <code>passwords</code> are normal input fields and we can add the <code>strategy</code> as a hidden field. The form has to submit a POST request to the <code>/authentication</code> endpoint. Since services can accept both, JSON and URL encoded forms we do not have to do anything else. The login page at <code>views/login.ejs</code> then looks like this:</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;content-type&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;text/html; charset=utf-8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span>
+    <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Feathers chat login<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;shortcut icon&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;favicon.ico&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;//cdn.rawgit.com/feathersjs/feathers-chat/v0.2.0/public/base.css&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;//cdn.rawgit.com/feathersjs/feathers-chat/v0.2.0/public/chat.css&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;flex flex-column&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;login container&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col-12 col-6-tablet push-3-tablet text-center heading&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;font-100&quot;</span>&gt;</span>Log in<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;col-12 col-6-tablet push-3-tablet col-4-desktop push-4-desktop&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;form&quot;</span> <span class="hljs-attr">method</span>=<span class="hljs-string">&quot;post&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;/authentication&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;hidden&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;strategy&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">&quot;local&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;block&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;email&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;block&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;password&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;submit&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;login&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button-primary block signup&quot;</span>&gt;</span>
+              Log in
+            <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>The <code>views/chat.ejs</code> page has the <code>users</code>, <code>user</code> (the authenticated user) and <code>messages</code> properties available which we passed in the <code>/chat</code> middleware. Rendering messages and users looks similar to the <a href="../chat/frontend.html">client side chat frontend</a>:</p>
+<pre><code class="lang-html"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">&quot;content-type&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;text/html; charset=utf-8&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span>
+    <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0&quot;</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Feathers chat<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;shortcut icon&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;favicon.ico&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;//cdn.rawgit.com/feathersjs/feathers-chat/v0.2.0/public/base.css&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;//cdn.rawgit.com/feathersjs/feathers-chat/v0.2.0/public/chat.css&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;app&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;flex flex-column&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;flex flex-column&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar flex flex-row flex-center&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-wrapper block center-element&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;logo&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;http://feathersjs.com/img/feathers-logo-wide.png&quot;</span>
+            <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;Feathers Logo&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Chat<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;flex flex-row flex-1 clear&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">aside</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sidebar col col-3 flex flex-column flex-space-between&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">header</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;flex flex-row flex-center&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h4</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;font-300 text-center&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;font-600 online-count&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">users.total</span> %&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> users
+            <span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+
+          <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;flex flex-column flex-1 list-unstyled user-list&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">%</span> <span class="hljs-attr">users.data.forEach</span>(<span class="hljs-attr">user</span> =&gt;</span> { %&gt;<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;block relative&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&lt;%= user.avatar %&gt;&quot;</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;avatar&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;absolute username&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">user.email</span> %&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">%</span> }); %&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;flex flex-row flex-center&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/logout&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;logout&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button button-primary&quot;</span>&gt;</span>
+              Sign Out
+            <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">aside</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;flex flex-column col col-9&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;chat flex flex-column flex-1 clear&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">%</span> <span class="hljs-attr">messages.data.forEach</span>(<span class="hljs-attr">message</span> =&gt;</span> { %&gt;
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;message flex flex-row&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;&lt;%= message.user &amp;&amp; message.user.avatar %&gt;&quot;</span>
+                <span class="hljs-attr">alt</span>=<span class="hljs-string">&quot;&lt;%= message.user &amp;&amp; message.user.email %&gt;&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;avatar&quot;</span>&gt;</span>
+              <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;message-wrapper&quot;</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;message-header&quot;</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;username font-600&quot;</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">message.user</span> &amp;&amp; <span class="hljs-attr">message.user.email</span> %&gt;</span>
+                  <span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                  <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;sent-date font-300&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">new</span> <span class="hljs-attr">Date</span>(<span class="hljs-attr">message.createdAt</span>)<span class="hljs-attr">.toString</span>() %&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;message-content font-300&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">%=</span> <span class="hljs-attr">message.text</span> %&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+              <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">%</span> }); %&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>If we now start the server (<code>npm start</code>) and go to <a href="http://localhost:3030/login" target="_blank">localhost:3030/login</a> we can see the login page. We can use the login information from one of the users created in the <a href="../chat/frontend.html">JavaScript chat frontend</a> and once successful, we will be redirected to <code>/chat</code> which shows the list of all current messages and users and clicking the <code>Sign out</code> button will log us out and redirect to the login page.</p>
+
+                                
+  <blockquote>
+    <p>
+        Is anything wrong, unclear, missing?
+        <a target="_blank" href="https://github.com/feathersjs/docs/issues/new?title=Comment: Recipe: Express middleware (SSR) (guides/auth/recipe.express-middleware.md)">Leave a comment</a> or
+        <a target="_blank" href="https://github.com/feathersjs/docs/edit/master/guides/auth/recipe.express-middleware.md">edit this page</a>.
+    </p>
+  </blockquote>
+
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="how-jwt-works.html" class="navigation navigation-prev " aria-label="Previous page: How JWT works">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="recipe.customize-response.html" class="navigation navigation-next " aria-label="Next page: Recipe: Custom Login Response">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Recipe: Express middleware (SSR)","level":"1.2.4.2","depth":3,"next":{"title":"Recipe: Custom Login Response","level":"1.2.4.3","depth":3,"path":"guides/auth/recipe.customize-response.md","ref":"guides/auth/recipe.customize-response.md","articles":[]},"previous":{"title":"How JWT works","level":"1.2.4.1","depth":3,"path":"guides/auth/how-jwt-works.md","ref":"guides/auth/how-jwt-works.md","articles":[]},"dir":"ltr"},"config":{"plugins":["feathers-collapsible-menu","heading-anchors","include-codeblock","edit-link","feathers-versions","advanced-emoji","codetabs","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"livereload":{},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"feathers-versions":{},"versions":{"gitbookConfigURL":"https://rawgit.com/feathersjs/feathers-docs/master/book.json","options":[{"value":"https://crow.docs.feathersjs.com","text":"Next version - Crow"},{"value":"https://docs.feathersjs.com","text":"Latest Stable - Buzzard"},{"value":"https://auk.docs.feathersjs.com","text":"Previous release - Auk"},{"value":"https://legacy.docs.feathersjs.com","text":"Legacy"}]},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/feathersjs/docs/edit/master","placement":"left"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"feathers-collapsible-menu":{},"menu":{"deep":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FeathersJS","gitbook":"*"},"file":{"path":"guides/auth/recipe.express-middleware.md","mtime":"2018-10-21T12:11:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-21T18:29:49.010Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-feathers-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-feathers-versions/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

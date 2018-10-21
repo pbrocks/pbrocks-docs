@@ -1,0 +1,28 @@
+{
+  "title": "FeathersJS",
+  "styles": {
+    "website": "styles/website.css"
+  },
+  "plugins": [
+    "feathers-collapsible-menu",
+    "heading-anchors",
+    "include-codeblock",
+    "edit-link",
+    "feathers-versions",
+    "advanced-emoji",
+    "codetabs"
+  ],
+  "pluginsConfig": {
+    "edit-link": {
+      "base": "https://github.com/feathersjs/docs/edit/master",
+      "label": "Edit This Page",
+      "placement": "left"
+    },
+    "lunr": {
+      "maxIndexSize": 1000000000
+    },
+    "menu": {
+      "deep": true
+    },
+  }
+}

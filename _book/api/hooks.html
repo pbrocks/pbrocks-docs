@@ -1,0 +1,1531 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Hooks · FeathersJS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-feathers-versions/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="events.html" />
+    
+    
+    <link rel="prev" href="services.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../guides/readme.html">
+            
+                <a href="../guides/readme.html">
+            
+                    
+                    Guides
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../guides/basics/readme.html">
+            
+                <a href="../guides/basics/readme.html">
+            
+                    
+                    The Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../guides/basics/setup.html">
+            
+                <a href="../guides/basics/setup.html">
+            
+                    
+                    Setting up
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../guides/basics/starting.html">
+            
+                <a href="../guides/basics/starting.html">
+            
+                    
+                    Getting started
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../guides/basics/services.html">
+            
+                <a href="../guides/basics/services.html">
+            
+                    
+                    Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../guides/basics/hooks.html">
+            
+                <a href="../guides/basics/hooks.html">
+            
+                    
+                    Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../guides/basics/rest.html">
+            
+                <a href="../guides/basics/rest.html">
+            
+                    
+                    REST APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="../guides/basics/databases.html">
+            
+                <a href="../guides/basics/databases.html">
+            
+                    
+                    Databases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="../guides/basics/real-time.html">
+            
+                <a href="../guides/basics/real-time.html">
+            
+                    
+                    Real-time APIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.8" data-path="../guides/basics/clients.html">
+            
+                <a href="../guides/basics/clients.html">
+            
+                    
+                    Clients
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.9" data-path="../guides/basics/generator.html">
+            
+                <a href="../guides/basics/generator.html">
+            
+                    
+                    The generator (CLI)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../guides/chat/readme.html">
+            
+                <a href="../guides/chat/readme.html">
+            
+                    
+                    A Chat Application
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../guides/chat/creating.html">
+            
+                <a href="../guides/chat/creating.html">
+            
+                    
+                    Creating the application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../guides/chat/service.html">
+            
+                <a href="../guides/chat/service.html">
+            
+                    
+                    Generating a service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../guides/chat/authentication.html">
+            
+                <a href="../guides/chat/authentication.html">
+            
+                    
+                    Adding authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../guides/chat/processing.html">
+            
+                <a href="../guides/chat/processing.html">
+            
+                    
+                    Processing data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../guides/chat/frontend.html">
+            
+                <a href="../guides/chat/frontend.html">
+            
+                    
+                    Building a frontend
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="../guides/chat/testing.html">
+            
+                <a href="../guides/chat/testing.html">
+            
+                    
+                    Writing tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../guides/frameworks/readme.html">
+            
+                <a href="../guides/frameworks/readme.html">
+            
+                    
+                    Frameworks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../guides/auth/readme.html">
+            
+                <a href="../guides/auth/readme.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../guides/auth/how-jwt-works.html">
+            
+                <a href="../guides/auth/how-jwt-works.html">
+            
+                    
+                    How JWT works
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../guides/auth/recipe.express-middleware.html">
+            
+                <a href="../guides/auth/recipe.express-middleware.html">
+            
+                    
+                    Recipe: Express middleware (SSR)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../guides/auth/recipe.customize-response.html">
+            
+                <a href="../guides/auth/recipe.customize-response.html">
+            
+                    
+                    Recipe: Custom Login Response
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.4" data-path="../guides/auth/recipe.customize-jwt-payload.html">
+            
+                <a href="../guides/auth/recipe.customize-jwt-payload.html">
+            
+                    
+                    Recipe: Custom JWT Payload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.5" data-path="../guides/auth/recipe.mixed-auth.html">
+            
+                <a href="../guides/auth/recipe.mixed-auth.html">
+            
+                    
+                    Recipe: Mixed Auth Endpoints
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.6" data-path="../guides/auth/recipe.oauth-basic.html">
+            
+                <a href="../guides/auth/recipe.oauth-basic.html">
+            
+                    
+                    Recipe: Basic OAuth
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.7" data-path="../guides/auth/recipe.custom-auth-strategy.html">
+            
+                <a href="../guides/auth/recipe.custom-auth-strategy.html">
+            
+                    
+                    Recipe: Custom Auth Strategies
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../guides/advanced/readme.html">
+            
+                <a href="../guides/advanced/readme.html">
+            
+                    
+                    Advanced Topics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../guides/advanced/file-uploading.html">
+            
+                <a href="../guides/advanced/file-uploading.html">
+            
+                    
+                    Uploading files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../guides/advanced/using-a-view-engine.html">
+            
+                <a href="../guides/advanced/using-a-view-engine.html">
+            
+                    
+                    Using a view engine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../guides/advanced/scaling.html">
+            
+                <a href="../guides/advanced/scaling.html">
+            
+                    
+                    Scaling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../guides/advanced/creating-a-plugin.html">
+            
+                <a href="../guides/advanced/creating-a-plugin.html">
+            
+                    
+                    Creating a plugin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    Core
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="application.html">
+            
+                <a href="application.html">
+            
+                    
+                    Application
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="services.html">
+            
+                <a href="services.html">
+            
+                    
+                    Services
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.3" data-path="hooks.html">
+            
+                <a href="hooks.html">
+            
+                    
+                    Hooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="events.html">
+            
+                <a href="events.html">
+            
+                    
+                    Events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="channels.html">
+            
+                <a href="channels.html">
+            
+                    
+                    Channels
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    Transports
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="express.html">
+            
+                <a href="express.html">
+            
+                    
+                    Express
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="socketio.html">
+            
+                <a href="socketio.html">
+            
+                    
+                    Socket.io
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="primus.html">
+            
+                <a href="primus.html">
+            
+                    
+                    Primus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" >
+            
+                <span>
+            
+                    
+                    Client
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.3.1" data-path="client.html">
+            
+                <a href="client.html">
+            
+                    
+                    Usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.2" data-path="client/rest.html">
+            
+                <a href="client/rest.html">
+            
+                    
+                    REST
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="client/socketio.html">
+            
+                <a href="client/socketio.html">
+            
+                    
+                    Socket.io
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="client/primus.html">
+            
+                <a href="client/primus.html">
+            
+                    
+                    Primus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    Authentication
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.4.1" data-path="authentication/server.html">
+            
+                <a href="authentication/server.html">
+            
+                    
+                    Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.2" data-path="authentication/client.html">
+            
+                <a href="authentication/client.html">
+            
+                    
+                    Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.3" data-path="authentication/local.html">
+            
+                <a href="authentication/local.html">
+            
+                    
+                    Local
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.4" data-path="authentication/jwt.html">
+            
+                <a href="authentication/jwt.html">
+            
+                    
+                    JWT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.5" data-path="authentication/oauth1.html">
+            
+                <a href="authentication/oauth1.html">
+            
+                    
+                    OAuth1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4.6" data-path="authentication/oauth2.html">
+            
+                <a href="authentication/oauth2.html">
+            
+                    
+                    OAuth2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" >
+            
+                <span>
+            
+                    
+                    Database
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="databases/adapters.html">
+            
+                <a href="databases/adapters.html">
+            
+                    
+                    Adapters
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="databases/common.html">
+            
+                <a href="databases/common.html">
+            
+                    
+                    Common API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="databases/querying.html">
+            
+                <a href="databases/querying.html">
+            
+                    
+                    Querying
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../migrating.html">
+            
+                <a href="../migrating.html">
+            
+                    
+                    Migrating
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../SECURITY.html">
+            
+                <a href="../SECURITY.html">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <a target="_blank" href="https://github.com/feathersjs/awesome-feathersjs">
+            
+                    
+                    Ecosystem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../help/readme.html">
+            
+                <a href="../help/readme.html">
+            
+                    
+                    Help
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../faq/readme.html">
+            
+                <a href="../faq/readme.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../contributing/readme.html">
+            
+                <a href="../contributing/readme.html">
+            
+                    
+                    Contributing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../license.html">
+            
+                <a href="../license.html">
+            
+                    
+                    License
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Hooks</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+  
+                                <h1 id="hooks">Hooks</h1>
+<p>Hooks are pluggable middleware functions that can be registered <strong>before</strong>, <strong>after</strong> or on <strong>error</strong>s of a <a href="services.html">service method</a>. You can register a single hook function or create a chain of them to create complex work-flows. Most of the time multiple hooks are registered so the examples show the &quot;hook chain&quot; array style registration.</p>
+<p>A hook is <strong>transport independent</strong>, which means it does not matter if it has been called through HTTP(S) (REST), Socket.io, Primus or any other transport Feathers may support in the future. They are also service agnostic, meaning they can be used with &#x200B;<strong>any</strong>&#x200B; service regardless of whether they have a model or not.</p>
+<p>Hooks are commonly used to handle things like validation, logging, populating related entities, sending notifications and more. This pattern keeps your application logic flexible, composable, and much easier to trace through and debug. For more information about the design patterns behind hooks see <a href="https://blog.feathersjs.com/api-service-composition-with-hooks-47af13aa6c01" target="_blank">this blog post</a>.</p>
+<h2 id="quick-example">Quick Example</h2>
+<p>The following example adds a <code>createdAt</code> and <code>updatedAt</code> property before saving the data to the database and logs any errors on the service:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> feathers = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@feathersjs/feathers&apos;</span>);
+
+<span class="hljs-keyword">const</span> app = feathers();
+
+app.service(<span class="hljs-string">&apos;messages&apos;</span>).hooks({
+  before: {
+    create(context) {
+      context.data.createdAt = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+    },
+
+    update(context) {
+      context.data.updatedAt = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+    },
+
+    patch(context) {
+      context.data.updatedAt = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
+    }
+  },
+
+  error(context) {
+    <span class="hljs-built_in">console</span>.error(<span class="hljs-string">`Error in <span class="hljs-subst">${context.path}</span> calling <span class="hljs-subst">${context.method}</span> method`</span>, context.error);
+  }
+});
+</code></pre>
+<h2 id="hook-functions">Hook functions</h2>
+<p>A hook function can be a normal or <code>async</code> function or arrow function that takes the <a href="#hook-context">hook context</a> as the parameter and can</p>
+<ul>
+<li>return a <code>context</code> object</li>
+<li>return nothing (<code>undefined</code>)</li>
+<li>return <code>feathers.SKIP</code> to skip all further hooks</li>
+<li><code>throw</code> an error</li>
+<li>for asynchronous operations return a <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">Promise</a> that<ul>
+<li>resolves with a <code>context</code> object</li>
+<li>resolves with <code>undefined</code></li>
+<li>rejects with an error</li>
+</ul>
+</li>
+</ul>
+<p>For more information see the <a href="#hook-flow">hook flow</a> and <a href="#asynchronous-hooks">asynchronous hooks</a> section.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// normal hook function</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">context</span>) </span>{
+  <span class="hljs-keyword">return</span> context;
+}
+
+<span class="hljs-comment">// asynchronous hook function with promise</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">context</span>) </span>{
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.resolve(context);
+}
+
+<span class="hljs-comment">// async hook function</span>
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">context</span>) </span>{
+  <span class="hljs-keyword">return</span> context;
+}
+
+<span class="hljs-comment">// normal arrow function</span>
+context =&gt; {
+  <span class="hljs-keyword">return</span> context;
+}
+
+<span class="hljs-comment">// asynchronous arrow function with promise</span>
+context =&gt; {
+  <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.resolve(context);
+}
+
+<span class="hljs-comment">// async arrow function</span>
+<span class="hljs-keyword">async</span> context =&gt; {
+  <span class="hljs-keyword">return</span> context;
+}
+
+<span class="hljs-comment">// skip further hooks</span>
+<span class="hljs-keyword">const</span> feathers = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;@feathersjs/feathers&apos;</span>);
+
+<span class="hljs-keyword">async</span> context =&gt; {
+  <span class="hljs-keyword">return</span> feathers.SKIP;
+}
+</code></pre>
+<h2 id="hook-context">Hook context</h2>
+<p>The hook <code>context</code> is passed to a hook function and contains information about the service method call. It has <strong>read only</strong> properties that should not be modified and <strong><em>writeable</em></strong> properties that can be changed for subsequent hooks.</p>
+<blockquote>
+<p><strong>Pro Tip:</strong> The <code>context</code> object is the same throughout a service method call so it is possible to add properties and use them in other hooks at a later time.</p>
+</blockquote>
+<h3 id="contextapp">context.app</h3>
+<p><code>context.app</code> is a <em>read only</em> property that contains the <a href="application.html">Feathers application object</a>. This can be used to retrieve other services (via <code>context.app.service(&apos;name&apos;)</code>) or configuration values.</p>
+<h3 id="contextservice">context.service</h3>
+<p><code>context.service</code> is a <em>read only</em> property and contains the service this hook currently runs on.</p>
+<h3 id="contextpath">context.path</h3>
+<p><code>context.path</code> is a <em>read only</em> property and contains the service name (or path) without leading or trailing slashes.</p>
+<h3 id="contextmethod">context.method</h3>
+<p><code>context.method</code> is a <em>read only</em> property with the name of the <a href="services.html">service method</a> (one of <code>find</code>, <code>get</code>, <code>create</code>, <code>update</code>, <code>patch</code>, <code>remove</code>).</p>
+<h3 id="contexttype">context.type</h3>
+<p><code>context.type</code> is a <em>read only</em> property with the hook type (one of <code>before</code>, <code>after</code> or <code>error</code>).</p>
+<h3 id="contextparams">context.params</h3>
+<p><code>context.params</code> is a <strong>writeable</strong> property that contains the <a href="services.html">service method</a> parameters (including <code>params.query</code>). For more information see the <a href="services.html#params">service params documentation</a>.</p>
+<h3 id="contextid">context.id</h3>
+<p><code>context.id</code> is a <strong>writeable</strong> property and the <code>id</code> for a <code>get</code>, <code>remove</code>, <code>update</code> and <code>patch</code> service method call. For <code>remove</code>, <code>update</code> and <code>patch</code> <code>context.id</code> can also be <code>null</code> when modifying multiple entries. In all other cases it will be <code>undefined</code>.</p>
+<blockquote>
+<p><strong>Note:</strong> <code>context.id</code> is only available for method types <code>get</code>, <code>remove</code>, <code>update</code> and <code>patch</code>.</p>
+</blockquote>
+<h3 id="contextdata">context.data</h3>
+<p><code>context.data</code> is a <strong>writeable</strong> property containing the data of a <code>create</code>, <code>update</code> and <code>patch</code> service method call.</p>
+<blockquote>
+<p><strong>Note:</strong> <code>context.data</code> will only be available for method types <code>create</code>, <code>update</code> and <code>patch</code>.</p>
+</blockquote>
+<h3 id="contexterror">context.error</h3>
+<p><code>context.error</code> is a <strong>writeable</strong> property with the error object that was thrown in a failed method call. It is only available in <code>error</code> hooks.</p>
+<blockquote>
+<p><strong>Note:</strong> <code>context.error</code> will only be available if <code>context.type</code> is <code>error</code>.</p>
+</blockquote>
+<h3 id="contextresult">context.result</h3>
+<p><code>context.result</code> is a <strong>writeable</strong> property containing the result of the successful service method call. It is only available in <code>after</code> hooks. <code>context.result</code> can also be set in</p>
+<ul>
+<li>A <code>before</code> hook to skip the actual service method (database) call</li>
+<li>An <code>error</code> hook to swallow the error and return a result instead</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> <code>context.result</code> will only be available if <code>context.type</code> is <code>after</code> or if <code>context.result</code> has been set.</p>
+</blockquote>
+<h3 id="contextdispatch">context.dispatch</h3>
+<p><code>context.dispatch</code> is a <strong>writeable, optional</strong> property and contains a &quot;safe&quot; version of the data that should be sent to any client. If <code>context.dispatch</code> has not been set <code>context.result</code> will be sent to the client instead.</p>
+<blockquote>
+<p><strong>Note:</strong> <code>context.dispatch</code> only affects the data sent through a Feathers Transport like <a href="express">REST</a> or <a href="socketio.html">Socket.io</a>. An internal method call will still get the data set in <code>context.result</code>.</p>
+</blockquote>
+<h3 id="contextstatuscode">context.statusCode</h3>
+<p><code>context.statusCode</code> is a <strong>writeable, optional</strong> property that allows to override the standard <a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html" target="_blank">HTTP status code</a> that should be returned.</p>
+<h2 id="hook-flow">Hook flow</h2>
+<p>In general, hooks are executed in the order they are registered with the original service method being called after all <code>before</code> hooks. This flow can be affected as follows.</p>
+<h3 id="throwing-an-error">Throwing an error</h3>
+<p>When an error is thrown (or the promise is rejected), all subsequent hooks - and the service method call if it didn&apos;t run already - will be skipped and only the error hooks will run.</p>
+<p>The following example throws an error when the text for creating a new message is empty. You can also create very similar hooks to use your Node validation library of choice.</p>
+<pre><code class="lang-js">app.service(<span class="hljs-string">&apos;messages&apos;</span>).hooks({
+  before: {
+    create: [
+      <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">context</span>) </span>{
+        <span class="hljs-keyword">if</span>(context.data.text.trim() === <span class="hljs-string">&apos;&apos;</span>) {
+          <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;Message text can not be empty&apos;</span>);
+        }
+      }
+    ]
+  }
+});
+</code></pre>
+<h3 id="setting-contextresult">Setting <code>context.result</code></h3>
+<p>When <code>context.result</code> is set in a <code>before</code> hook, the original <a href="services.html">service method</a> call will be skipped. All other hooks will still execute in their normal order. The following example always returns the currently <a href="authentication/server.html">authenticated user</a> instead of the actual user for all <code>get</code> method calls:</p>
+<pre><code class="lang-js">app.service(<span class="hljs-string">&apos;users&apos;</span>).hooks({
+  before: {
+    get: [
+      <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">context</span>) </span>{
+        <span class="hljs-comment">// Never call the actual users service</span>
+        <span class="hljs-comment">// just use the authenticated user</span>
+        context.result = context.params.user;
+      }
+    ]
+  }
+});
+</code></pre>
+<h3 id="returning-feathersskip">Returning <code>feathers.SKIP</code></h3>
+<p><code>require(&apos;@feathersjs/feathers&apos;).SKIP</code> can be returned from a hook to indicate that all following hooks should be skipped. If returned by a <strong>before</strong> hook, the remaining <strong>before</strong> hooks are skipped; any <strong>after</strong> hooks will still be run. If it hasn&apos;t run yet, the service method will still be called unless <code>context.result</code> is set already.</p>
+<h2 id="asynchronous-hooks">Asynchronous hooks</h2>
+<p>When the hook function is <code>async</code> or a Promise is returned it will wait until all asynchronous operations resolve or reject before continuing to the next hook.</p>
+<blockquote>
+<p><strong>Important:</strong> As stated in the <a href="#hook-functions">hook functions</a> section the promise has to either resolve with the <code>context</code> object (usually done with <code>.then(() =&gt; context)</code> at the end of the promise chain) or with <code>undefined</code>.</p>
+</blockquote>
+<h3 id="asyncawait">async/await</h3>
+<p>When using Node v8.0.0 or later the use of <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank">async/await</a> is highly recommended. This will avoid many common issues when using Promises and asynchronous hook flows. Any hook function can be <code>async</code> in which case it will wait until all <code>await</code> operations are completed. Just like a normal hook it should return the <code>context</code> object or <code>undefined</code>.</p>
+<p>The following example shows an async/await hook that uses another service to retrieve and populate the messages <code>user</code> when getting a single message:</p>
+<pre><code class="lang-js">app.service(<span class="hljs-string">&apos;messages&apos;</span>).hooks({
+  after: {
+    get: [
+      <span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">context</span>) </span>{
+        <span class="hljs-keyword">const</span> userId = context.result.userId;
+
+        <span class="hljs-comment">// Since context.app.service(&apos;users&apos;).get returns a promise we can `await` it</span>
+        <span class="hljs-keyword">const</span> user = <span class="hljs-keyword">await</span> context.app.service(<span class="hljs-string">&apos;users&apos;</span>).get(userId);
+
+        <span class="hljs-comment">// Update the result (the message)</span>
+        context.result.user = user;
+
+        <span class="hljs-comment">// Returning will resolve the promise with the `context` object</span>
+        <span class="hljs-keyword">return</span> context;
+      }
+    ]
+  }
+});
+</code></pre>
+<h3 id="returning-promises">Returning promises</h3>
+<p>The following example shows an asynchronous hook that uses another service to retrieve and populate the messages <code>user</code> when getting a single message.</p>
+<pre><code class="lang-js">app.service(<span class="hljs-string">&apos;messages&apos;</span>).hooks({
+  after: {
+    get: [
+      <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">context</span>) </span>{
+        <span class="hljs-keyword">const</span> userId = context.result.userId;
+
+        <span class="hljs-comment">// context.app.service(&apos;users&apos;).get returns a Promise already</span>
+        <span class="hljs-keyword">return</span> context.app.service(<span class="hljs-string">&apos;users&apos;</span>).get(userId).then(user =&gt; {
+          <span class="hljs-comment">// Update the result (the message)</span>
+          context.result.user = user;
+
+          <span class="hljs-comment">// Returning will resolve the promise with the `context` object</span>
+          <span class="hljs-keyword">return</span> context;
+        });
+      }
+    ]
+  }
+});
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> A common issue when hooks are not running in the expected order is a missing <code>return</code> statement of a promise at the top level of the hook function.</p>
+<p><strong>Important:</strong> Most Feathers service calls and newer Node packages already return Promises. They can be returned and chained directly. There is no need to instantiate your own <code>new</code> Promise instance in those cases.</p>
+</blockquote>
+<h3 id="converting-callbacks">Converting callbacks</h3>
+<p>When the asynchronous operation is using a <em>callback</em> instead of returning a promise you have to create and return a new Promise (<code>new Promise((resolve, reject) =&gt; {})</code>) or use <a href="https://nodejs.org/api/util.html#util_util_promisify_original" target="_blank">util.promisify</a>.</p>
+<p>The following example reads a JSON file converting <a href="https://nodejs.org/api/fs.html#fs_fs_readfile_file_options_callback" target="_blank">fs.readFile</a> with <code>util.promisify</code>:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+<span class="hljs-keyword">const</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;util&apos;</span>);
+<span class="hljs-keyword">const</span> readFile = util.promisify(fs.readFile);
+
+app.service(<span class="hljs-string">&apos;messages&apos;</span>).hooks({
+  after: {
+    get: [
+      <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">context</span>) </span>{
+        <span class="hljs-keyword">return</span> readFile(<span class="hljs-string">&apos;./myfile.json&apos;</span>).then(data =&gt; {
+          context.result.myFile = data.toString();
+
+          <span class="hljs-keyword">return</span> context;
+        });
+      }
+    ]
+  }
+});
+</code></pre>
+<blockquote>
+<p><strong>Pro Tip:</strong> Other tools like <a href="https://github.com/petkaantonov/bluebird" target="_blank">Bluebird</a> also help converting between callbacks and promises.</p>
+</blockquote>
+<h2 id="registering-hooks">Registering hooks</h2>
+<p>Hook functions are registered on a service through the <code>app.service(&lt;servicename&gt;).hooks(hooks)</code> method. There are several options for what can be passed as <code>hooks</code>:</p>
+<pre><code class="lang-js"><span class="hljs-comment">// The standard all at once way (also used by the generator)</span>
+<span class="hljs-comment">// an array of functions per service method name (and for `all` methods)</span>
+app.service(<span class="hljs-string">&apos;servicename&apos;</span>).hooks({
+  before: {
+    all: [
+      <span class="hljs-comment">// Use normal functions</span>
+      <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">context</span>) </span>{ <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;before all hook ran&apos;</span>); }
+    ],
+    find: [
+      <span class="hljs-comment">// Use ES6 arrow functions</span>
+      context =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;before find hook 1 ran&apos;</span>),
+      context =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;before find hook 2 ran&apos;</span>)
+    ],
+    get: [ <span class="hljs-comment">/* other hook functions here */</span> ],
+    create: [],
+    update: [],
+    patch: [],
+    remove: []
+  },
+  after: {
+    all: [],
+    find: [],
+    get: [],
+    create: [],
+    update: [],
+    patch: [],
+    remove: []
+  },
+  error: {
+    all: [],
+    find: [],
+    get: [],
+    create: [],
+    update: [],
+    patch: [],
+    remove: []
+  }
+});
+
+<span class="hljs-comment">// Register a single hook before, after and on error for all methods</span>
+app.service(<span class="hljs-string">&apos;servicename&apos;</span>).hooks({
+  before(context) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;before all hook ran&apos;</span>);
+  },
+  after(context) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;after all hook ran&apos;</span>);
+  },
+  error(context) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;error all hook ran&apos;</span>);
+  }
+});
+</code></pre>
+<blockquote>
+<p><strong>Pro Tip:</strong> When using the full object, <code>all</code> is a special keyword meaning this hook will run for all methods. <code>all</code> hooks will be registered before other method specific hooks.</p>
+<p><strong>Pro Tip:</strong> <code>app.service(&lt;servicename&gt;).hooks(hooks)</code> can be called multiple times and the hooks will be registered in that order. Normally all hooks should be registered at once however to see at a glance what the service is going to do.</p>
+</blockquote>
+<h2 id="application-hooks">Application hooks</h2>
+<p>To add hooks to every service <code>app.hooks(hooks)</code> can be used. Application hooks are <a href="#registering-hooks">registered in the same format as service hooks</a> and also work exactly the same. Note when application hooks will be executed however:</p>
+<ul>
+<li><code>before</code> application hooks will always run <em>before</em> all service <code>before</code> hooks</li>
+<li><code>after</code> application hooks will always run <em>after</em> all service <code>after</code> hooks</li>
+<li><code>error</code> application hooks will always run <em>after</em> all service <code>error</code> hooks</li>
+</ul>
+<p>Here is an example for a very useful application hook that logs every service method error with the service and method name as well as the error stack.</p>
+<pre><code class="lang-js">app.hooks({
+  error(context) {
+    <span class="hljs-built_in">console</span>.error(<span class="hljs-string">`Error in &apos;<span class="hljs-subst">${context.path}</span>&apos; service method &apos;<span class="hljs-subst">${context.method}</span>&apos;`</span>, context.error.stack);
+  }
+});
+</code></pre>
+
+                                
+  <blockquote>
+    <p>
+        Is anything wrong, unclear, missing?
+        <a target="_blank" href="https://github.com/feathersjs/docs/issues/new?title=Comment: Hooks (api/hooks.md)">Leave a comment</a> or
+        <a target="_blank" href="https://github.com/feathersjs/docs/edit/master/api/hooks.md">edit this page</a>.
+    </p>
+  </blockquote>
+
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="services.html" class="navigation navigation-prev " aria-label="Previous page: Services">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="events.html" class="navigation navigation-next " aria-label="Next page: Events">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Hooks","level":"1.3.1.3","depth":3,"next":{"title":"Events","level":"1.3.1.4","depth":3,"path":"api/events.md","ref":"api/events.md","articles":[]},"previous":{"title":"Services","level":"1.3.1.2","depth":3,"path":"api/services.md","ref":"api/services.md","articles":[]},"dir":"ltr"},"config":{"plugins":["feathers-collapsible-menu","heading-anchors","include-codeblock","edit-link","feathers-versions","advanced-emoji","codetabs","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"livereload":{},"search":{},"codetabs":{},"lunr":{"maxIndexSize":1000000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"heading-anchors":{},"highlight":{},"feathers-versions":{},"versions":{"gitbookConfigURL":"https://rawgit.com/feathersjs/feathers-docs/master/book.json","options":[{"value":"https://crow.docs.feathersjs.com","text":"Next version - Crow"},{"value":"https://docs.feathersjs.com","text":"Latest Stable - Buzzard"},{"value":"https://auk.docs.feathersjs.com","text":"Previous release - Auk"},{"value":"https://legacy.docs.feathersjs.com","text":"Legacy"}]},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/feathersjs/docs/edit/master","placement":"left"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"feathers-collapsible-menu":{},"menu":{"deep":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FeathersJS","gitbook":"*"},"file":{"path":"api/hooks.md","mtime":"2018-10-21T12:11:38.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-21T18:29:49.010Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-feathers-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-heading-anchors/anchor-style.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-feathers-versions/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
